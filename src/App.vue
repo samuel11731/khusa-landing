@@ -167,9 +167,23 @@
           <div class="relative transition-all duration-1000 ease-out transform"
                :class="consumerVisible ? 'translate-x-0' : '-translate-x-[100px]'"
           >
-            <div class="w-32 h-32 mx-auto mb-8 relative flex items-center justify-center">
+            <div class="w-[300px] h-[300px] rounded-full overflow-hidden border-4 border-white shadow-2xl bg-gray-100">
+               <img src="/consumer-person.png" alt="Consumer" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+
+            
+        <!-- White Info Cards (Zoom Animation) -->
+        <div ref="cardsSection" class="flex flex-col md:flex-row justify-center items-center gap-8 mb-40 transition-all duration-1000 ease-out transform" :class="cardsVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'">
+          <!-- Card 1: Governments -->
+          <!-- Card 1: Governments -->
+          <div class="bg-white rounded-[40px] p-8 max-w-sm shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] hover:shadow-2xl transition duration-500 text-center group border border-gray-50 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 to-red-400 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
+            
+            <div class="w-[300px] h-[300px] mx-auto mb-8 relative flex items-center justify-center">
               <div class="absolute inset-0 bg-orange-50 rounded-full scale-0 group-hover:scale-100 transition duration-500"></div>
-              <img src="/icon-coin-new.png" alt="Governments" class="w-24 h-24 object-contain relative z-10 drop-shadow-lg" />
+              <img src="/icon-coin-new.png" alt="Governments" class="w-[280px] h-[280px] object-contain relative z-10 drop-shadow-lg" />
             </div>
 
             <div class="inline-block px-4 py-1 rounded-full bg-orange-100 text-orange-600 text-xs font-bold uppercase tracking-wider mb-6">Key Clients</div>
@@ -182,12 +196,13 @@
           </div>
 
           <!-- Card 2: Merchants -->
-          <div class="bg-white rounded-[40px] p-12 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] hover:shadow-2xl transition duration-500 text-center group border border-gray-50 relative overflow-hidden">
+          <!-- Card 2: Merchants -->
+          <div class="bg-white rounded-[40px] p-8 max-w-sm shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] hover:shadow-2xl transition duration-500 text-center group border border-gray-50 relative overflow-hidden">
              <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-400 to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
 
-            <div class="w-32 h-32 mx-auto mb-8 relative flex items-center justify-center">
+            <div class="w-[300px] h-[300px] mx-auto mb-8 relative flex items-center justify-center">
                <div class="absolute inset-0 bg-teal-50 rounded-full scale-0 group-hover:scale-100 transition duration-500"></div>
-              <img src="/icon-coin-new.png" alt="Merchants" class="w-24 h-24 object-contain relative z-10 drop-shadow-lg" />
+              <img src="/icon-coin-new.png" alt="Merchants" class="w-[280px] h-[280px] object-contain relative z-10 drop-shadow-lg" />
             </div>
 
              <div class="inline-block px-4 py-1 rounded-full bg-teal-100 text-teal-600 text-xs font-bold uppercase tracking-wider mb-6">Key Clients</div>
@@ -199,39 +214,7 @@
             </p>
           </div>
         </div>
-<!-- ... existing code ... -->
-<!-- In Script Setup: -->
 
-  // Animation Logic
-  const merchantSection = ref(null);
-  const merchantVisible = ref(false);
-
-  const governmentSection = ref(null);
-  const governmentVisible = ref(false);
-
-  const consumerSection = ref(null);
-  const consumerVisible = ref(false);
-  
-  const cardsSection = ref(null);
-  const cardsVisible = ref(false);
-
-  onMounted(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            if (entry.target === merchantSection.value) merchantVisible.value = true;
-            if (entry.target === governmentSection.value) governmentVisible.value = true;
-            if (entry.target === consumerSection.value) consumerVisible.value = true;
-            if (entry.target === cardsSection.value) cardsVisible.value = true;
-        }
-      });
-    }, { threshold: 0.3 }); // Threshold 0.3 works well for triggering exactly when visible
-
-    if (merchantSection.value) observer.observe(merchantSection.value);
-    if (governmentSection.value) observer.observe(governmentSection.value);
-    if (consumerSection.value) observer.observe(consumerSection.value);
-    if (cardsSection.value) observer.observe(cardsSection.value);
-  });
 
         <!-- Gain Control Section (3 Column) -->
         <div class="mb-40">
