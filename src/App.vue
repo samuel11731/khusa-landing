@@ -14,16 +14,16 @@
         </div>
 
         <div class="hidden md:flex items-center gap-10 text-sm font-medium text-gray-300">
-          <a href="#" class="hover:text-white transition">Home</a>
-          <a href="#" class="hover:text-white transition">Solutions</a>
-          <a href="#" class="hover:text-white transition">Company</a>
+          <a href="#" class="hover:text-orange-500 transition">Home</a>
+          <a href="#" class="hover:text-orange-500 transition">Solutions</a>
+          <a href="#" class="hover:text-orange-500 transition">Company</a>
         </div>
 
         <div class="flex items-center gap-4">
           <button class="px-8 py-2.5 bg-orange-500 hover:bg-orange-600 rounded-full text-sm font-bold transition shadow-lg shadow-orange-500/20">
             Sign up
           </button>
-          <button class="px-8 py-2.5 border border-white/20 hover:bg-white/10 rounded-full text-sm font-bold transition">
+          <button class="px-8 py-2.5 bg-white text-orange-500 hover:bg-gray-100 rounded-full text-sm font-bold transition">
             Sign in
           </button>
         </div>
