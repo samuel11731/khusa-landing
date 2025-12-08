@@ -1,16 +1,18 @@
 <template>
-  <div class="font-sans">
+  <div class="font-sans overflow-x-hidden">
     
-    <!-- DARK HERO SECTION -->
     <div class="text-white bg-cover bg-center bg-no-repeat relative" style="background-image: url('/background.png');">
       
-      <nav class="flex items-center justify-between px-6 py-6 max-w-7xl mx-auto relative z-10">
+      <nav class="flex items-center justify-between px-6 py-6 max-w-7xl mx-auto relative z-10" data-aos="fade-down">
         <div class="flex items-center gap-2">
           <div class="relative w-8 h-8">
               <div class="absolute inset-0 bg-white transform rotate-45 rounded sm:rounded-md"></div>
               <div class="absolute inset-0 bg-orange-500 transform rotate-45 rounded sm:rounded-md scale-50"></div>
           </div>
-          <span class="text-2xl font-bold tracking-wide">Khusapay</span>
+          
+          <span class="text-2xl font-bold tracking-wide text-white">
+            Khusa<span class="text-[#F89521]">pay</span>
+          </span>
         </div>
 
         <div class="hidden md:flex items-center gap-10 text-sm font-medium text-gray-300">
@@ -31,15 +33,17 @@
 
       <div class="px-6 pt-20 pb-40 max-w-[1078px] mx-auto text-center flex flex-col items-center gap-[99px] relative z-10">
         
-        <h1 class="text-[50px] md:text-[86px] font-light leading-[1.06] tracking-[-0.2px] drop-shadow-lg flex flex-col items-center gap-[27px] max-w-[980px] w-full">
+        <h1 class="text-[50px] md:text-[86px] font-light leading-[1.06] tracking-[-0.2px] drop-shadow-lg flex flex-col items-center gap-[27px] max-w-[980px] w-full" data-aos="zoom-in" data-aos-duration="1000">
           <span>The Ultimate <span class="text-[#F89521]">Payment &</span></span>
           <span class="text-[#F89521]">Settlement Platform</span>
         </h1>
 
-        <div class="flex flex-wrap justify-center items-center gap-4">
+        <div class="flex flex-wrap justify-center items-center gap-4" data-aos="fade-up" data-aos-delay="200">
           <span class="text-gray-400 text-sm font-medium mr-2">for</span>
           
-          <a href="#" v-for="category in categories" :key="category"
+          <a href="#" v-for="(category, index) in categories" :key="category"
+             :data-aos="index % 2 === 0 ? 'flip-up' : 'flip-down'"
+             :data-aos-delay="index * 100"
              class="px-6 py-2 bg-[#8B5E3C] hover:bg-[#6d4a30] hover:scale-105 active:scale-95 transition-all duration-300 rounded-full text-sm font-medium text-white shadow-sm"
           >
             {{ category }}
@@ -50,7 +54,7 @@
           </button>
         </div>
 
-        <p class="text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed font-light">
+        <p class="text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed font-light" data-aos="fade-up" data-aos-delay="300">
           Focus less on chasing payments and spend more time <br class="hidden md:block"/>
           growing your Business and planning for the future.
         </p>
@@ -58,10 +62,9 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-0 w-full">
           
           <div v-for="(feature, index) in features" :key="index"
-               class="p-8 rounded-[32px] border backdrop-blur-md transition duration-500 group text-left relative"
-               :class="[
-                 'bg-white/5 border-white/5'
-               ]"
+               data-aos="fade-up"
+               :data-aos-delay="index * 200"
+               class="p-8 rounded-[32px] border backdrop-blur-md transition duration-500 group text-left relative bg-white/5 border-white/5 hover:bg-white/10"
           >
             
             <div v-if="feature.customImage" class="relative -mt-32 mb-12 w-full flex justify-center z-10" :class="feature.scale || 'scale-150'">
@@ -90,11 +93,10 @@
       </div>
     </div>
     
-    <!-- WHITE CONTENT SECTION -->
     <div class="bg-white text-slate-800 pt-32 pb-32">
       <div class="max-w-[1078px] mx-auto px-6">
         
-        <div class="text-center space-y-4 mb-32">
+        <div class="text-center space-y-4 mb-32" data-aos="fade-up">
           <h2 class="text-4xl md:text-5xl font-light leading-tight text-slate-900">
             The future of settlements is digitally <br/>
             driven, efficient, secure and transparent.
@@ -104,81 +106,54 @@
           </h3>
         </div>
 
-        <!-- Merchant Sector Solutions (Reveal Animation) -->
-        <div ref="merchantSection" class="w-full flex flex-col md:flex-row items-center justify-center gap-10 min-h-[500px] mb-20 opacity-0 transition-opacity duration-700 ease-out" :class="{'opacity-100': merchantVisible}">
-          
-          <!-- Text (Slides Left) -->
-          <div class="max-w-md text-left z-0 transition-all duration-1000 ease-out transform"
-               :class="merchantVisible ? 'translate-x-0 opacity-100' : 'translate-x-[100px] opacity-0'"
-          >
+        <div class="w-full flex flex-col md:flex-row items-center justify-center gap-10 min-h-[500px] mb-20">
+          <div class="max-w-md text-left z-0" data-aos="fade-right">
             <h3 class="text-[#F97316] text-xl font-medium mb-2">Merchant <br/> Sector Solutions</h3>
             <p class="text-gray-500 leading-relaxed">
               Khusapay is a merchant-centric, fintech powered settlement engine that offers the complete power of a bank to any establishment.
             </p>
           </div>
 
-          <!-- Image (Slides Right) -->
-          <div class="relative z-10 transition-all duration-1000 ease-out transform"
-               :class="merchantVisible ? 'translate-x-0' : '-translate-x-[100px]'"
-          >
+          <div class="relative z-10" data-aos="fade-left">
             <div class="w-[350px] h-[350px] rounded-full overflow-hidden border-4 border-white shadow-2xl relative bg-gray-100">
                <img src="/merchant-person.png" alt="Merchant" class="w-full h-full object-cover" />
             </div>
           </div>
         </div>
 
-        <!-- Government Sector Solutions (Reveal Animation - Reverse) -->
-        <div ref="governmentSection" class="w-full flex flex-col md:flex-row-reverse items-center justify-center gap-10 min-h-[400px] mb-20 opacity-0 transition-opacity duration-700 ease-out" :class="{'opacity-100': governmentVisible}">
-          
-          <!-- Text (Slides Right in Reverse Layout) -->
-          <div class="max-w-md text-left transition-all duration-1000 ease-out transform"
-               :class="governmentVisible ? 'translate-x-0 opacity-100' : '-translate-x-[100px] opacity-0'"
-          >
+        <div class="w-full flex flex-col md:flex-row-reverse items-center justify-center gap-10 min-h-[400px] mb-20">
+          <div class="max-w-md text-left" data-aos="fade-left">
             <h3 class="text-[#F97316] text-xl font-medium mb-2">Government & public <br/> Sector Solutions</h3>
             <p class="text-gray-500 leading-relaxed">
               By enhancing collection of revenue and reducing leakages, Khusa Pay saves expenditure and ensures convenience.
             </p>
           </div>
 
-          <!-- Image (Slides Left in Reverse Layout) -->
-          <div class="relative transition-all duration-1000 ease-out transform"
-               :class="governmentVisible ? 'translate-x-0' : 'translate-x-[100px]'"
-          >
+          <div class="relative" data-aos="fade-right">
             <div class="w-[300px] h-[300px] rounded-full overflow-hidden border-4 border-white shadow-2xl bg-gray-100">
                <img src="/government-person.png" alt="Government" class="w-full h-full object-cover" />
             </div>
           </div>
         </div>
 
-        <!-- Consumer Sector Solutions (Reveal Animation) -->
-        <div ref="consumerSection" class="w-full flex flex-col md:flex-row items-center justify-center gap-10 min-h-[400px] opacity-0 transition-opacity duration-700 ease-out" :class="{'opacity-100': consumerVisible}">
-          
-          <!-- Text (Slides Left) -->
-          <div class="max-w-md text-left transition-all duration-1000 ease-out transform"
-               :class="consumerVisible ? 'translate-x-0 opacity-100' : 'translate-x-[100px] opacity-0'"
-          >
+        <div class="w-full flex flex-col md:flex-row items-center justify-center gap-10 min-h-[600px]">
+          <div class="max-w-md text-left" data-aos="fade-right">
             <h3 class="text-[#F97316] text-xl font-medium mb-2">Consumer <br/> Sector Solutions</h3>
             <p class="text-gray-500 leading-relaxed">
               Receive and disburse funds through multiple channels without worrying about the overhead of managing separate float accounts.
             </p>
           </div>
 
-          <!-- Image (Slides Right) -->
-          <div class="relative transition-all duration-1000 ease-out transform"
-               :class="consumerVisible ? 'translate-x-0' : '-translate-x-[100px]'"
-          >
-            <div class="w-[300px] h-[300px] rounded-full overflow-hidden border-4 border-white shadow-2xl bg-gray-100">
+          <div class="relative" data-aos="fade-left">
+            <div class="w-[400px] h-[400px] rounded-full overflow-hidden border-4 border-white shadow-2xl bg-gray-100">
                <img src="/consumer-person.png" alt="Consumer" class="w-full h-full object-cover" />
             </div>
           </div>
         </div>
 
             
-        <!-- White Info Cards (Zoom Animation) -->
-        <div ref="cardsSection" class="flex flex-col md:flex-row justify-center items-center gap-8 mb-40 transition-all duration-1000 ease-out transform" :class="cardsVisible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'">
-          <!-- Card 1: Governments -->
-          <!-- Card 1: Governments -->
-          <div class="bg-white rounded-[40px] p-8 max-w-sm shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] hover:shadow-2xl transition duration-500 text-center group border border-gray-50 relative overflow-hidden">
+        <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-40 mt-32">
+          <div data-aos="zoom-in-up" class="bg-white rounded-[40px] p-8 max-w-sm shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] hover:shadow-2xl transition duration-500 text-center group border border-gray-50 relative overflow-hidden">
             <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 to-red-400 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
             
             <div class="w-[300px] h-[300px] mx-auto mb-8 relative flex items-center justify-center">
@@ -191,13 +166,11 @@
             <h3 class="text-3xl font-bold mb-6 text-slate-900">Governments <br/> <span class="text-orange-500">& Public Sector</span></h3>
             
             <p class="text-gray-500 leading-relaxed mb-0 px-4">
-              Governments can spur thriving economies by offering convenient access to public services and utilities. Khusa Pay works with governments to offer suitable payment solutions that enhance service delivery.
+              Governments can spur thriving economies by offering convenient access to public services and utilities.
             </p>
           </div>
 
-          <!-- Card 2: Merchants -->
-          <!-- Card 2: Merchants -->
-          <div class="bg-white rounded-[40px] p-8 max-w-sm shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] hover:shadow-2xl transition duration-500 text-center group border border-gray-50 relative overflow-hidden">
+          <div data-aos="zoom-in-up" data-aos-delay="200" class="bg-white rounded-[40px] p-8 max-w-sm shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] hover:shadow-2xl transition duration-500 text-center group border border-gray-50 relative overflow-hidden">
              <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-400 to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
 
             <div class="w-[300px] h-[300px] mx-auto mb-8 relative flex items-center justify-center">
@@ -210,116 +183,135 @@
             <h3 class="text-3xl font-bold mb-6 text-teal-600">Merchants</h3>
             
             <p class="text-gray-500 leading-relaxed mb-0 px-4">
-              From corporations to businesses, Khusa Pay tracks all financial movements through virtual accounts, helping them operate and run in a modern and tech-forward way.
+              From corporations to businesses, Khusa Pay tracks all financial movements through virtual accounts.
             </p>
           </div>
         </div>
 
 
-        <!-- Gain Control Section (3 Column) -->
-        <div class="mb-40">
-          <div class="text-center mb-20 space-y-4">
-            <span class="text-[#F89521] font-bold text-sm tracking-widest uppercase">Solutions</span>
-            <h2 class="text-4xl md:text-5xl font-bold text-slate-900 max-w-2xl mx-auto leading-tight">
-              Gain control over all financial transactions easily and securely
-            </h2>
-            <p class="text-gray-500 max-w-3xl mx-auto text-lg pt-4 leading-relaxed">
-               With Khusapay you will experience a simple, fast and efficient payment system again, again and again. Your transactions are fully protected against fraud and you can have peace of mind that your transactions are secure.
-            </p>
+        <div class="bg-[#FFFBF5] rounded-[40px] py-24 px-10 mb-40">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24 items-start">
+            
+            <div data-aos="fade-right">
+              <span class="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#F89521] text-xs font-bold tracking-widest uppercase mb-6">
+                Solutions
+              </span>
+              
+              <h2 class="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+                Gain control over all financial transactions easily and securely
+              </h2>
+            </div>
+
+            <div data-aos="fade-left" class="pt-2 lg:pt-16">
+              <p class="text-gray-600 text-lg leading-relaxed">
+                With Khusapay you will experience a simple, fast and efficient payment system again, again and again. Your transactions are fully protected against fraud and you can have peace of mind that your transactions are secure. You can keep track of your transactions via a state-of-the-art reporting system.
+              </p>
+            </div>
+
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <!-- Col 1 -->
-            <div class="bg-slate-50 rounded-[40px] p-10 hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-gray-100">
-              <img src="/icon-3d-cube.png" class="w-20 h-20 mb-8 drop-shadow-md" alt="icon"/>
-              <h3 class="text-xl font-bold text-slate-900 mb-4">Complete Payment <br/> Transparency</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16">
+            
+            <div data-aos="fade-up" data-aos-delay="0" class="group">
+              <div class="mb-8 transform group-hover:-translate-y-2 transition duration-300">
+                <img src="/icon-3d-cube.png" class="w-16 h-16 drop-shadow-xl" alt="icon"/>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">
+                Complete Payment <br/> Transparency
+              </h3>
               <p class="text-gray-500 text-sm leading-relaxed">
                 Khusapay enables real-time settlements and reconciliations by enabling payments to various parties through virtual accounts.
               </p>
             </div>
 
-            <!-- Col 2 -->
-            <div class="bg-[#EFF6FF] rounded-[40px] p-10 border-2 border-blue-100 relative">
-               <img src="/icon-3d-cube.png" class="w-20 h-20 mb-8 drop-shadow-md" alt="icon"/>
-              <h3 class="text-xl font-bold text-slate-900 mb-4">Global Visibility & <br/> Tighter Controls</h3>
-              <p class="text-gray-600 text-sm leading-relaxed">
+            <div data-aos="fade-up" data-aos-delay="200" class="group">
+              <div class="mb-8 transform group-hover:-translate-y-2 transition duration-300">
+                <img src="/icon-3d-cube.png" class="w-16 h-16 drop-shadow-xl" alt="icon"/>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">
+                Global Visibility & <br/> Tighter Controls
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
                 With complete control to track and manage settlements, Khusapay offers comprehensive reporting and management all in one.
               </p>
             </div>
 
-            <!-- Col 3 -->
-            <div class="bg-slate-50 rounded-[40px] p-10 hover:bg-white hover:shadow-xl transition duration-300 border border-transparent hover:border-gray-100">
-               <img src="/icon-3d-cube.png" class="w-20 h-20 mb-8 drop-shadow-md" alt="icon"/>
-              <h3 class="text-xl font-bold text-slate-900 mb-4">Actionable Financial <br/> Information</h3>
-               <p class="text-gray-500 text-sm leading-relaxed">
+            <div data-aos="fade-up" data-aos-delay="400" class="group">
+              <div class="mb-8 transform group-hover:-translate-y-2 transition duration-300">
+                <img src="/icon-3d-cube.png" class="w-16 h-16 drop-shadow-xl" alt="icon"/>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">
+                Actionable Financial <br/> Information
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
                 Khusapay provides data and gives analytics that give insights on trends specific to services or customers.
               </p>
             </div>
+
           </div>
         </div>
 
-        <!-- Feature Phone Section (Central Phone + Satellites) -->
-        <div class="relative w-full min-h-[800px] flex items-center justify-center mb-40 bg-slate-50 rounded-[60px] p-10 overflow-hidden">
-           
-           <div class="relative z-10 w-full max-w-4xl mx-auto flex items-center justify-center">
-             
-             <!-- Center Phone -->
-             <div class="relative w-[300px] md:w-[400px] z-20 transform translate-y-10">
-               <img src="/phone-features.png" alt="Khusapay App" class="w-full drop-shadow-2xl" />
-             </div>
+        <div class="w-full mb-40"> <div class="mb-8 ml-4 md:ml-0" data-aos="fade-right">
+                <span class="text-orange-400 font-bold text-xs md:text-sm tracking-[0.2em] uppercase">Multi Channel Payments</span>
+            </div>
 
-             <!-- Satellites - Left -->
-             <div class="absolute left-0 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-20">
-               <div class="bg-white p-4 pr-8 rounded-full shadow-lg flex items-center gap-4 animate-bounce-slow">
-                 <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-500">
-                   <CreditCard class="w-6 h-6"/>
-                 </div>
-                 <div class="text-left">
-                   <h4 class="font-bold text-slate-900">Credit/Debit Cards</h4>
-                   <p class="text-xs text-gray-500">Promptly send money</p>
-                 </div>
-               </div>
+            <div class="bg-[#F0F6FF] rounded-[40px] py-12 px-6 md:px-16 relative">
+              
+              <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+                
+                <div class="flex flex-col gap-10 lg:w-1/3 z-10">
+                  <div class="flex items-center gap-5 group">
+                    <div class="w-14 h-14 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 shrink-0 transition-transform group-hover:scale-110">
+                      <CreditCard class="w-7 h-7" />
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-bold text-slate-800 mb-1">Credit/Debit Cards</h3>
+                      <p class="text-slate-500 text-sm leading-relaxed">Promptly send money to friends and pay bills on time.</p>
+                    </div>
+                  </div>
 
-                <div class="bg-white p-4 pr-8 rounded-full shadow-lg flex items-center gap-4 ml-10 animate-bounce-slow delay-700">
-                 <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-500">
-                   <Smartphone class="w-6 h-6"/>
-                 </div>
-                 <div class="text-left">
-                   <h4 class="font-bold text-slate-900">Mobile Money</h4>
-                   <p class="text-xs text-gray-500">Be assured privacy</p>
-                 </div>
-               </div>
-             </div>
+                  <div class="flex items-center gap-5 group">
+                    <div class="w-14 h-14 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-600 shrink-0 transition-transform group-hover:scale-110">
+                      <Smartphone class="w-7 h-7" />
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-bold text-slate-800 mb-1">Mobile Money</h3>
+                      <p class="text-slate-500 text-sm leading-relaxed">Be assured privacy and security through use of tools.</p>
+                    </div>
+                  </div>
+                </div>
 
-             <!-- Satellites - Right -->
-             <div class="absolute right-0 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-20 z-0">
-               <div class="bg-white p-4 pl-8 rounded-full shadow-lg flex flex-row-reverse items-center gap-4 animate-bounce-slow delay-300">
-                 <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-500">
-                   <Landmark class="w-6 h-6"/>
-                 </div>
-                 <div class="text-right">
-                   <h4 class="font-bold text-slate-900">Bank Account</h4>
-                   <p class="text-xs text-gray-500">Send money to or receive</p>
-                 </div>
-               </div>
+                <div class="lg:w-1/3 flex justify-center relative z-20 -my-20 md:-my-32 order-first lg:order-none mb-10 lg:mb-0" data-aos="zoom-in" data-aos-duration="1200">
+                  <img src="/hand-with-phone.png" alt="Khusapay App" class="w-[280px] md:w-[420px] max-w-none drop-shadow-2xl transform hover:scale-105 transition duration-500" />
+                </div>
 
-                <div class="bg-white p-4 pl-8 rounded-full shadow-lg flex flex-row-reverse items-center gap-4 mr-10 animate-bounce-slow delay-1000">
-                 <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500">
-                   <ArrowLeftRight class="w-6 h-6"/>
-                 </div>
-                 <div class="text-right">
-                   <h4 class="font-bold text-slate-900">Bank Transfer</h4>
-                   <p class="text-xs text-gray-500">Easily withdraw money</p>
-                 </div>
-               </div>
-             </div>
+                <div class="flex flex-col gap-10 lg:w-1/3 z-10">
+                  <div class="flex items-center gap-5 group">
+                    <div class="w-14 h-14 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 shrink-0 transition-transform group-hover:scale-110">
+                      <Landmark class="w-7 h-7" />
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-bold text-slate-800 mb-1">Bank Account</h3>
+                      <p class="text-slate-500 text-sm leading-relaxed">Send money to or receive money from other users.</p>
+                    </div>
+                  </div>
 
-           </div>
+                  <div class="flex items-center gap-5 group">
+                    <div class="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 shrink-0 transition-transform group-hover:scale-110">
+                      <ArrowLeftRight class="w-7 h-7" />
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-bold text-slate-800 mb-1">Bank Transfer</h3>
+                      <p class="text-slate-500 text-sm leading-relaxed">Easily withdraw money from any agent countrywide.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
         </div>
-
-        <!-- CTA Section (Dark Blue) -->
-        <div class="bg-[#0F172A] rounded-[40px] p-0 md:pl-20 relative overflow-hidden flex flex-col md:flex-row items-center justify-between">
-           <!-- Content -->
+        <div data-aos="flip-up" class="bg-[#0F172A] rounded-[40px] p-0 md:pl-20 relative overflow-hidden flex flex-col md:flex-row items-center justify-between">
            <div class="relative z-10 max-w-xl py-20 px-10 md:px-0 text-left">
              <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
                Khusapay’s technology enables governments to <span class="text-teal-400">do more</span>.
@@ -332,7 +324,6 @@
              </button>
            </div>
            
-           <!-- Phone Image -->
            <div class="relative md:w-1/2 h-[500px] flex items-end justify-end">
              <img src="/phone-cta.png" alt="Khusapay App" class="h-full object-contain object-bottom translate-y-10 translate-x-10" />
            </div>
@@ -341,7 +332,6 @@
       </div>
     </div>
 
-    <!-- Footer -->
     <footer class="bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
       <div class="max-w-[1078px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div>
@@ -393,44 +383,28 @@
 </template>
 
 <script setup>
-  import { ref, onMounted } from 'vue';
+  import { onMounted } from 'vue';
+  
+  // AOS
+  import AOS from 'aos';
+  import 'aos/dist/aos.css';
+
+  // Icons
   import { 
     LayoutDashboard, ArrowLeftRight, LineChart, ChevronRight, 
-    Building2, Store, CreditCard, Landmark, ArrowUpRight,
-    ShieldCheck, Smartphone, Globe, Zap, Users, Lock 
+    CreditCard, Landmark, ArrowUpRight, Smartphone 
   } from 'lucide-vue-next';
 
   const categories = ['Government', 'Merchants', 'Consumers', 'Corporates'];
-  
-  // Animation Logic
-  const merchantSection = ref(null);
-  const merchantVisible = ref(false);
 
-  const governmentSection = ref(null);
-  const governmentVisible = ref(false);
-
-  const consumerSection = ref(null);
-  const consumerVisible = ref(false);
-  
-  const cardsSection = ref(null);
-  const cardsVisible = ref(false);
-
+  // Initialize AOS
   onMounted(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            if (entry.target === merchantSection.value) merchantVisible.value = true;
-            if (entry.target === governmentSection.value) governmentVisible.value = true;
-            if (entry.target === consumerSection.value) consumerVisible.value = true;
-            if (entry.target === cardsSection.value) cardsVisible.value = true;
-        }
-      });
-    }, { threshold: 0.3 });
-
-    if (merchantSection.value) observer.observe(merchantSection.value);
-    if (governmentSection.value) observer.observe(governmentSection.value);
-    if (consumerSection.value) observer.observe(consumerSection.value);
-    if (cardsSection.value) observer.observe(cardsSection.value);
+    AOS.init({
+      duration: 1000,
+      offset: 100,
+      mirror: true, 
+      once: false,
+    });
   });
 
   const features = [
@@ -450,7 +424,7 @@
       description: 'By enhancing collection of revenue and reducing leakages, Khusa Pay saves expenditure and ensures convenience.',
       icon: ArrowLeftRight,
       baseColor: 'pink',
-      color: '#EC4899', // pink-500
+      color: '#EC4899', 
       customImage: '/card-icon-2.png',
       scale: 'scale-125'
     },
@@ -460,7 +434,7 @@
       description: 'Receive and disburse funds through multiple channels without worrying about the overhead of managing separate accounts.',
       icon: LineChart,
       baseColor: 'blue',
-      color: '#3B82F6', // blue-500
+      color: '#3B82F6', 
       customImage: '/card-icon-3.png',
       scale: 'scale-150'
     }
@@ -468,23 +442,8 @@
 </script>
 
 <style>
-/* Font fix for clean rendering */
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-@keyframes bounce-slow {
-  0%, 100% {
-    transform: translateY(-10%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-  }
-  50% {
-    transform: translateY(10%);
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
-}
-.animate-bounce-slow {
-  animation: bounce-slow 3s infinite;
 }
 </style>
