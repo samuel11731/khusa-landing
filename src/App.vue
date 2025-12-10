@@ -2,67 +2,65 @@
   <div class="font-sans overflow-x-hidden w-full">
     
     <div class="text-white bg-cover bg-center bg-no-repeat relative" style="background-image: url('/background.png');">
-      
+      <!-- Navbar -->
       <nav class="flex items-center justify-between px-6 py-6 max-w-7xl mx-auto relative z-10" data-aos="fade-down">
         <div class="flex items-center gap-2">
-          <img src="/Frame.png" alt="Khusapay Logo" class="h-15 w-auto object-contain" />
+          <img src="/Frame.png" alt="Khusapay Logo" class="h-10 md:h-15 w-auto object-contain" />
         </div>
 
         <div class="hidden md:flex items-center gap-10 text-sm font-medium text-gray-300">
-          <a href="#" class="hover:text-orange-500 transition">Home</a>
-          <a href="#" class="hover:text-orange-500 transition">Solutions</a>
-          <a href="#" class="hover:text-orange-500 transition">Company</a>
-        </div>
+  <a href="#" class="hover:text-[#F89521]/80 transition">Home</a>
+  <a href="#" class="hover:text-[#F89521]/80 transition">Solutions</a>
+  <a href="#" class="hover:text-[#F89521]/80 transition">Company</a>
+</div>
 
         <div class="flex items-center gap-4">
-          <button class="px-8 py-2.5 bg-orange-500 hover:bg-orange-600 rounded-full text-sm font-bold transition shadow-lg shadow-orange-500/20">
+          <button class="px-4 py-1 md:px-8 md:py-2.5 bg-[#F89521] hover:bg-[#F89521]/80 rounded-full text-xs md:text-sm font-bold transition shadow-lg shadow-orange-orange/20">
             Sign up
           </button>
-          <button class="px-8 py-2.5 bg-white text-orange-500 hover:bg-gray-100 rounded-full text-sm font-bold transition">
+          <button class="px-4 py-1 md:px-8 md:py-2.5 bg-white text-black hover:bg-gray-100 rounded-full text-xs md:text-sm font-bold transition">
             Sign in
           </button>
         </div>
       </nav>
 
-      <div class="px-6 pt-20 pb-40 max-w-[1078px] mx-auto text-center flex flex-col items-center gap-[27px] relative z-10">
-        
-        <h1 
-          class="font-light leading-[1.06] tracking-[-0.2px] drop-shadow-xl flex flex-col items-center gap-4 w-full bg-clip-text text-transparent" 
-          data-aos="zoom-in" 
-          data-aos-duration="1000"
-          
-          style="
-            font-family: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            /* CONTROLS: */
-            font-size: 76px; /* CHANGE THIS NUMBER to resize text */
-            background-image: linear-gradient(to bottom, #FFFFFF 60%, #F89521 100%);
-          "
-        >
-          <span>The Ultimate Payment &</span>
-          <span>Settlement Platform</span>
-        </h1>
-        <div class="flex flex-wrap justify-center items-center gap-4 mt-8" data-aos="fade-up" data-aos-delay="200">
+      <!-- Hero Section -->
+      <div class="px-4 pt-10 md:pt-20 pb-10 md:pb-[65px] max-w-[1078px] mx-auto text-center flex flex-col items-center gap-6 md:gap-[27px] relative z-10">
+        <div class="bg-gradient-to-br from-white to-[#F89521] xl:w-[980px] bg-clip-text">
+          <h1 
+            class="text-2xl md:text-[86px] font-light leading-[1.1] md:leading-[1] tracking-[-0.2px] flex flex-col items-center gap-2 md:gap-4 w-full text-transparent" 
+            
+            style="
+              font-family: 'Inter', sans-serif;
+            "
+          >
+            The Ultimate Payment &
+            Settlement Platform
+          </h1>
+        </div>
+
+        <div class="flex flex-wrap justify-center items-center gap-3 md:gap-4 mt-4 md:mt-8" data-aos="fade-up" data-aos-delay="200">
           <span class="text-gray-400 text-sm font-medium mr-2">for</span>
           
           <a href="#" v-for="(category, index) in categories" :key="category"
              :data-aos="index % 2 === 0 ? 'flip-up' : 'flip-down'"
              :data-aos-delay="index * 100"
-             class="px-6 py-2 bg-[#8B5E3C] hover:bg-[#6d4a30] hover:scale-105 active:scale-95 transition-all duration-300 rounded-full text-sm font-medium text-white shadow-sm"
+             class="px-5 py-2 md:px-6 md:py-2 bg-[#8B5E3C] hover:bg-[#6d4a30] hover:scale-105 active:scale-95 transition-all duration-300 rounded-full text-xs md:text-sm font-medium text-white shadow-sm"
           >
             {{ category }}
           </a>
 
-          <button class="w-12 h-12 bg-orange-500 hover:bg-orange-600 rounded-full flex items-center justify-center text-white transition duration-300 shadow-lg shadow-orange-500/30 hover:scale-110 active:scale-95 ml-2">
-             <ChevronRight class="w-6 h-6" />
+          <button class="w-10 h-10 md:w-8 md:h-8 bg-orange-500 hover:bg-orange-600 rounded-full flex items-center justify-center text-white transition duration-300 shadow-lg shadow-orange-500/30 hover:scale-110 active:scale-95 ml-2">
+             <ChevronRight class="w-5 h-5 md:w-6 md:h-6" />
           </button>
         </div>
 
-        <p class="text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed font-light mt-8" data-aos="fade-up" data-aos-delay="300">
-          Focus less on chasing payments and spend more time <br class="hidden md:block"/>
-          growing your Business and planning for the future.
-        </p>
+        <p class="text-gray-300 max-w-4xl mx-auto text-[18px] md:text-[27px] leading-relaxed font-light mt-2 md:mt-2" data-aos="fade-up" data-aos-delay="300">
+  Focus less on chasing payments and spend more time <br class="hidden md:block"/>
+  growing your Business and planning for the future.
+</p>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-0 w-full mt-10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-6 w-full mt-20 md:mt-32">
           <div v-for="(feature, index) in features" :key="index"
                data-aos="fade-up"
                :data-aos-delay="index * 200"
@@ -78,13 +76,15 @@
                     :class="`bg-${feature.baseColor}-500/30`"></div>
                <component :is="feature.icon" :class="`w-8 h-8 relative z-10 text-${feature.baseColor}-400`" />
             </div>
-            <h3 class="text-4xl font-normal mb-3 tracking-tight text-white leading-tight">
+            
+            <h3 class="text-3xl md:text-4xl font-normal mb-3 tracking-tight text-white leading-tight">
               {{ feature.titlePart1 }} <br/>
               <span class="bg-clip-text text-transparent bg-gradient-to-r" :class="feature.gradient">
                 {{ feature.titlePart2 }}
               </span>
             </h3>
-            <p class="text-gray-400 text-sm leading-relaxed">
+            
+            <p class="text-gray-200 text-sm leading-relaxed">
               {{ feature.description }}
             </p>
           </div>
@@ -93,49 +93,49 @@
     </div>
     
     <div class="flex justify-center mt-16">
-        <span class="px-12 py-3 rounded-full border border-[#027D89] text-[#027D89] text-sm font-bold tracking-[0.25em] uppercase bg-white shadow-[0_2px_10px_rgba(0,0,0,0.05)]">
+        <span class="px-10 py-2.5 md:px-12 md:py-3 rounded-full border border-[#027D89] text-[#027D89] text-xs md:text-sm font-bold tracking-[0.25em] uppercase bg-white shadow-[0_2px_10px_rgba(0,0,0,0.05)]">
           Sectors
         </span>
     </div>
 
-    <div class="bg-white text-slate-800 pt-32 pb-12">
+    <div class="bg-white text-slate-800 pt-20 md:pt-32 pb-12">
       <div class="max-w-[1078px] mx-auto px-6">
         
-        <div class="text-center space-y-4 mb-32" data-aos="fade-up">
-          <h2 class="text-4xl md:text-5xl font-light leading-tight text-slate-900">
+        <div class="text-center space-y-4 mb-20 md:mb-32" data-aos="fade-up">
+          <h2 class="text-3xl md:text-5xl font-light leading-tight text-slate-900">
             The future of settlements is digitally <br/>
             driven, efficient, secure and transparent.
           </h2>
-          <h3 class="text-2xl md:text-3xl font-bold text-slate-900">
+          <h3 class="text-xl md:text-3xl font-bold text-slate-900">
             Harness this power today!
           </h3>
         </div>
 
-        <div class="w-full flex flex-col md:flex-row items-center justify-center gap-10 min-h-[500px] mb-20">
+        <div class="w-full flex flex-col md:flex-row items-center justify-center gap-10 min-h-[400px] md:min-h-[500px] mb-20">
           <div class="max-w-md text-left z-0" data-aos="fade-right">
-            <h3 class="text-[#F97316] text-4xl font-medium mb-2">Merchant <br/> Sector Solutions</h3>
-            <p class="text-xl -gray-500 leading-relaxed">
+            <h3 class="text-[#F97316] text-3xl md:text-4xl font-medium mb-2">Merchant <br/> Sector Solutions</h3>
+            <p class="text-lg md:text-xl text-gray-500 leading-relaxed">
               Khusapay is a merchant-centric, fintech powered settlement engine that offers the complete power of a bank to any establishment.
             </p>
           </div>
           <div class="relative z-10" data-aos="fade-left">
-            <div class="relative w-[350px] h-[350px] flex items-end justify-center">
+            <div class="relative w-[190px] h-[190px] md:w-[350px] md:h-[350px] flex items-end justify-center">
                <div class="absolute inset-0 rounded-full border-4 border-white shadow-2xl bg-gray-100 z-0"></div>
                <img src="/merchant-person.png" alt="Merchant" class="relative z-10 w-[130%] max-w-none h-auto object-contain mb-0" />
             </div>
           </div>
         </div>
 
-        <div class="w-full flex flex-col md:flex-row-reverse items-center justify-center gap-24 min-h-[400px] mb-20">
+        <div class="w-full flex flex-col md:flex-row-reverse items-center justify-center gap-16 md:gap-24 min-h-[400px] mb-20">
           <div class="max-w-md text-left" data-aos="fade-left">
-            <h3 class="text-[#F97316] text-4xl font-medium mb-2">Government & public <br/> Sector Solutions</h3>
-            <p class="text-xl-gray-500 leading-relaxed">
+            <h3 class="text-[#F97316] text-3xl md:text-4xl font-medium mb-2">Government & public <br/> Sector Solutions</h3>
+            <p class="text-lg md:text-xl text-gray-500 leading-relaxed">
               By enhancing collection of revenue and reducing leakages, Khusa Pay saves expenditure and ensures convenience.
             </p>
           </div>
           <div class="relative" data-aos="fade-right">
-            <div class="relative w-[300px] h-[300px] flex items-end justify-center">
-               <div class="absolute inset-0 rounded-full border-4 border-white shadow-2xl bg-gray-100 z-0"></div>
+            <div class="relative w-[180px] h-[180px] md:w-[300px] md:h-[300px] flex items-end justify-center">
+               <div class="absolute inset-0 rounded-full border-4 border-white shadow-2xl bg-red-500 z-0"></div>
                <img src="/government-person.png" alt="Government" class="relative z-10 w-[130%] max-w-none h-auto object-contain mb-0" />
             </div>
           </div>
@@ -143,42 +143,42 @@
 
         <div class="w-full flex flex-col md:flex-row items-center justify-center gap-10 min-h-[400px]">
           <div class="max-w-md text-left" data-aos="fade-right">
-            <h3 class="text-[#F97316] text-4xl font-medium mb-2">Consumer <br/> Sector Solutions</h3>
-            <p class="text-xl-gray-500 text-lg leading-relaxed">
+            <h3 class="text-[#F97316] text-3xl md:text-4xl font-medium mb-2">Consumer <br/> Sector Solutions</h3>
+            <p class="text-lg md:text-xl text-gray-500 leading-relaxed">
               Receive and disburse funds through multiple channels without worrying about the overhead of managing separate float accounts.
             </p>
           </div>
           <div class="relative" data-aos="fade-left">
-            <div class="relative w-[300px] h-[300px] flex items-end justify-center">
+            <div class="relative w-[210px] h-[210px] md:w-[300px] md:h-[300px] flex items-end justify-center">
                <div class="absolute inset-0 rounded-full border-4 border-white shadow-2xl bg-gray-100 z-0"></div>
                <img src="/consumer-person.png" alt="Consumer" class="relative z-10 w-[130%] max-w-none h-auto object-contain mb-0" />
             </div>
           </div>
         </div>
 
-        <div class="max-w-4xl mx-auto mt-32 mb-12">
+        <div class="max-w-4xl mx-auto mt-24 md:mt-32 mb-12">
           <div class="flex justify-start mb-4" data-aos="fade-up">
             <span class="px-3 py-1.5 rounded-full border border-[#F89521] text-[#F89521] text-xs font-bold tracking-[0.25em] uppercase bg-white shadow-[0_2px_10px_rgba(0,0,0,0.05)]">
               Key Clients
             </span>
           </div>
           <div class="flex flex-col md:flex-row items-stretch gap-8">
-            <div data-aos="zoom-in-up" class="bg-white rounded-[40px] p-8 max-w-sm w-full shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] hover:shadow-2xl transition duration-500 text-center group border border-gray-50 relative overflow-hidden flex flex-col">
+            <div data-aos="zoom-in-up" data-aos-delay="200"class="bg-white rounded-[40px] p-8 max-w-sm w-full shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)]  text-center group border border-gray-50 relative overflow-hidden flex flex-col">
               <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 to-red-400 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
-              <div class="w-[280px] h-[280px] mx-auto mb-8 relative flex items-center justify-center shrink-0">
-                <div class="absolute inset-0 bg-orange-50 rounded-full scale-0 group-hover:scale-100 transition duration-500"></div>
-                <img src="/icon-coin-new.png" alt="Governments" class="w-[260px] h-[260px] object-contain relative z-10 drop-shadow-lg" />
+              <div class="w-[240px] h-[240px] md:w-[280px] md:h-[280px] mx-auto mb-8 relative flex items-center justify-center shrink-0">
+                <div class="absolute inset-0 rounded-full"></div>
+                <img src="/icon-coin-new.png" alt="Governments" class="w-full h-full object-contain relative z-10 drop-shadow-lg" />
               </div>
               <h3 class="text-3xl font-bold mb-6 text-slate-900">Governments <br/> <span class="text-orange-500">& Public Sector</span></h3>
               <p class="text-gray-500 leading-relaxed mb-0 px-4">
                 Governments can spur thriving economies by offering convenient access to public services and utilities.
               </p>
             </div>
-            <div data-aos="zoom-in-up" data-aos-delay="200" class="bg-white rounded-[40px] p-8 max-w-sm w-full shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] hover:shadow-2xl transition duration-500 text-center group border border-gray-50 relative overflow-hidden flex flex-col">
+            <div data-aos="zoom-in-up" data-aos-delay="200" class="bg-white rounded-[40px] p-8 max-w-sm w-full shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)]  transition duration-500 text-center group border border-gray-50 relative overflow-hidden flex flex-col">
                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-400 to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
-              <div class="w-[280px] h-[280px] mx-auto mb-8 relative flex items-center justify-center shrink-0">
-                 <div class="absolute inset-0 bg-teal-50 rounded-full scale-0 group-hover:scale-100 transition duration-500"></div>
-                <img src="/icon-coin-new.png" alt="Merchants" class="w-[260px] h-[260px] object-contain relative z-10 drop-shadow-lg" />
+              <div class="w-[240px] h-[240px] md:w-[280px] md:h-[280px] mx-auto mb-8 relative flex items-center justify-center shrink-0">
+                 <div class="absolute inset-0 bg-teal-50 rounded-full scale-0"></div>
+                <img src="/icon-coin-new.png" alt="Merchants" class="w-full h-full object-contain relative z-10 drop-shadow-lg" />
               </div>
               <h3 class="text-3xl font-bold mb-6 text-teal-600">Merchants</h3>
               <p class="text-gray-500 leading-relaxed mb-0 px-4">
@@ -188,27 +188,27 @@
           </div>
         </div>
 
-        <div class="-mx-6 bg-gradient-to-b from-[#FFFBF5] via-[#FFFBF5] to-transparent rounded-t-[40px] rounded-b-none py-24 px-12 md:px-16 mb-0 relative z-20">
+        <div class="-mx-6 bg-gradient-to-b from-[#FFFBF5] via-[#FFFBF5] to-transparent rounded-t-[40px] rounded-b-none py-12 md:py-24 px-6 md:px-16 mb-0 relative z-20">
           
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24 items-start">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 mb-16 md:mb-24 items-start">
             <div data-aos="fade-right">
               <span class="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#F89521] text-xs font-bold tracking-widest uppercase mb-6">
                 Solutions
               </span>
-              <h2 class="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+              <h2 class="text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
                 Gain control over all financial transactions easily and securely
               </h2>
             </div>
-            <div data-aos="fade-left" class="pt-2 lg:pt-16">
+            <div data-aos="fade-left" class="pt-0 md:pt-16">
               <p class="text-gray-600 text-lg leading-relaxed">
                 With Khusapay you will experience a simple, fast and efficient payment system again, again and again. Your transactions are fully protected against fraud and you can have peace of mind that your transactions are secure.
               </p>
             </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16 mb-12">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-12 md:gap-y-16 mb-12">
             <div data-aos="fade-up" data-aos-delay="0" class="group">
-              <div class="mb-8 transform group-hover:-translate-y-2 transition duration-300">
+              <div class="mb-6 md:mb-8 transform group-hover:-translate-y-2 transition duration-300">
                 <img src="/icon-3d-cube.png" class="w-16 h-16 drop-shadow-xl" alt="icon"/>
               </div>
               <h3 class="text-xl font-bold text-slate-900 mb-4">Complete Payment <br/> Transparency</h3>
@@ -217,7 +217,7 @@
               </p>
             </div>
             <div data-aos="fade-up" data-aos-delay="200" class="group">
-              <div class="mb-8 transform group-hover:-translate-y-2 transition duration-300">
+              <div class="mb-6 md:mb-8 transform group-hover:-translate-y-2 transition duration-300">
                 <img src="/icon-3d-cube.png" class="w-16 h-16 drop-shadow-xl" alt="icon"/>
               </div>
               <h3 class="text-xl font-bold text-slate-900 mb-4">Global Visibility & <br/> Tighter Controls</h3>
@@ -226,7 +226,7 @@
               </p>
             </div>
             <div data-aos="fade-up" data-aos-delay="400" class="group">
-              <div class="mb-8 transform group-hover:-translate-y-2 transition duration-300">
+              <div class="mb-6 md:mb-8 transform group-hover:-translate-y-2 transition duration-300">
                 <img src="/icon-3d-cube.png" class="w-16 h-16 drop-shadow-xl" alt="icon"/>
               </div>
               <h3 class="text-xl font-bold text-slate-900 mb-4">Actionable Financial <br/> Information</h3>
@@ -236,65 +236,77 @@
             </div>
           </div>
 
-          <div class="mt-20 ml-4 md:ml-0" data-aos="fade-right">
-             <span class="font-bold uppercase text-[#F89521] text-[12px] leading-[16px] tracking-[1.44px]" style="font-family: Helvetica, Arial, sans-serif;">
+          <div class="mt-12 md:mt-20 ml-0 md:ml-0" data-aos="fade-right">
+             <span class="font-bold uppercase text-[#F89521] text-[12px] leading-[16px] tracking-[1.44px]" style="font-family: 'Inter', sans-serif;">
                Multi Channel Payments
              </span>
           </div>
 
         </div>
 
-        <div class="w-full mb-0 -mt-24 relative z-10"> 
+       <div class="w-full mb-20 -mt-10 md:-mt-24 relative z-10 px-4 md:px-0"> 
             
             <div 
-              class="bg-cover bg-center bg-no-repeat rounded-[50px] py-8 px-6 md:px-20 relative shadow-sm pt-32"
-              style="background-image: url('/payment-bg.png');"
+              class="mx-auto max-w-6xl bg-gradient-to-b from-[#F0F4FF] to-white rounded-[40px] md:rounded-[50px] pb-12 pt-0 md:pt-16 px-6 md:px-16 relative shadow-xl border border-white/50"
+              data-aos="fade-up"
+              data-aos-duration="1000"
             >
               
-              <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+              <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 relative z-10">
                 
-                <div class="flex flex-col gap-10 lg:w-1/3 z-10 py-4">
-                  <div class="flex items-center gap-5 group">
-                    <div class="w-20 h-20 rounded-full bg-purple-100 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-sm">
-                      <img src="/icon-credit-card.png" alt="Credit Card" class="w-12 h-12 object-contain" />
+                <div 
+                  class="relative -mt-1 mb-8 flex justify-center md:absolute md:top-[-100px] md:left-1/3 md:-translate-x-1/2 md:mt-0 md:mb-0 z-20"
+                  data-aos="zoom-in"
+                  data-aos-duration="1200"
+                  data-aos-delay="200"
+                >
+                  <img 
+                    src="/hand-with-phone.png" 
+                    alt="Khusapay App" 
+                    class="w-[180px] md:w-[280px] max-w-none drop-shadow-2xl" 
+                  />
+                </div>
+
+                <div class="flex flex-col gap-8 md:gap-12 w-full md:w-1/3 pt-2 md:pt-0">
+                  <div class="flex items-center gap-4 group" data-aos="fade-right" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-sm">
+                      <img src="/icon-credit-card.png" alt="Credit Card" class="w-8 h-8 object-contain" />
                     </div>
                     <div>
-                      <h3 class="text-xl font-bold text-[#0F172A] mb-1">Credit/Debit Cards</h3>
-                      <p class="text-slate-500 text-sm leading-relaxed">Promptly send money to friends and pay bills on time.</p>
+                      <h3 class="text-lg font-bold text-[#0F172A] mb-1">Credit/Debit Cards</h3>
+                      <p class="text-slate-500 text-xs md:text-sm leading-relaxed">Promptly send money to friends and pay bills on time.</p>
                     </div>
                   </div>
-                  <div class="flex items-center gap-5 group">
-                    <div class="w-20 h-20 rounded-full bg-cyan-100 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-sm">
-                      <img src="/icon-mobile-money.png" alt="Mobile Money" class="w-12 h-12 object-contain" />
+                  <div class="flex items-center gap-4 group" data-aos="fade-right" data-aos-delay="400">
+                    <div class="w-16 h-16 rounded-full bg-cyan-100 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-sm">
+                      <img src="/icon-mobile-money.png" alt="Mobile Money" class="w-8 h-8 object-contain" />
                     </div>
                     <div>
-                      <h3 class="text-xl font-bold text-[#0F172A] mb-1">Mobile Money</h3>
-                      <p class="text-slate-500 text-sm leading-relaxed">Be assured privacy and security through use of tools.</p>
+                      <h3 class="text-lg font-bold text-[#0F172A] mb-1">Mobile Money</h3>
+                      <p class="text-slate-500 text-xs md:text-sm leading-relaxed">Be assured privacy and security through use of tools.</p>
                     </div>
                   </div>
                 </div>
 
-                <div class="lg:w-1/3 flex justify-center relative z-20 -my-24 md:-my-36 order-first lg:order-none mb-4 lg:mb-0">
-                  <img src="/hand-with-phone.png" alt="Khusapay App" class="w-[220px] md:w-[350px] max-w-none drop-shadow-2xl transform hover:scale-105 transition duration-500" />
-                </div>
+                <div class="hidden md:block w-1/3"></div>
 
-                <div class="flex flex-col gap-10 lg:w-1/3 z-10 py-4">
-                  <div class="flex items-center gap-5 group">
-                    <div class="w-20 h-20 rounded-full bg-indigo-100 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-sm">
-                      <img src="/icon-bank.png" alt="Bank Account" class="w-12 h-12 object-contain" />
+                <div class="flex flex-col gap-8 md:gap-12 w-full md:w-1/3 pt-2 md:pt-0">
+                  <div class="flex items-center gap-4 group" data-aos="fade-left" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-full bg-indigo-100 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-sm">
+                      <img src="/icon-bank.png" alt="Bank Account" class="w-8 h-8 object-contain" />
                     </div>
                     <div>
-                      <h3 class="text-xl font-bold text-[#0F172A] mb-1">Bank Account</h3>
-                      <p class="text-slate-500 text-sm leading-relaxed">Send money to or receive money from other users.</p>
+                      <h3 class="text-lg font-bold text-[#0F172A] mb-1">Bank Account</h3>
+                      <p class="text-slate-500 text-xs md:text-sm leading-relaxed">Send money to or receive money from other users.</p>
                     </div>
                   </div>
-                  <div class="flex items-center gap-5 group">
-                    <div class="w-20 h-20 rounded-full bg-yellow-100 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-sm">
-                      <img src="/icon-transfer.png" alt="Bank Transfer" class="w-12 h-12 object-contain" />
+                  <div class="flex items-center gap-4 group" data-aos="fade-left" data-aos-delay="400">
+                    <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-sm">
+                      <img src="/icon-transfer.png" alt="Bank Transfer" class="w-8 h-8 object-contain" />
                     </div>
                     <div>
-                      <h3 class="text-xl font-bold text-[#0F172A] mb-1">Bank Transfer</h3>
-                      <p class="text-slate-500 text-sm leading-relaxed">Easily withdraw money from any agent countrywide.</p>
+                      <h3 class="text-lg font-bold text-[#0F172A] mb-1">Bank Transfer</h3>
+                      <p class="text-slate-500 text-xs md:text-sm leading-relaxed">Easily withdraw money from any agent countrywide.</p>
                     </div>
                   </div>
                 </div>
@@ -302,11 +314,10 @@
               </div>
             </div>
         </div>
-
-        <div class="-mx-6 bg-cover bg-center bg-no-repeat text-white rounded-[18px] pt-16 pb-0 px-12 md:px-16 relative overflow-hidden mb-0" style="background-image: url('/footer-bg.png');" data-aos="fade-up">
+        <div class="-mx-6 bg-cover bg-center bg-no-repeat text-white rounded-[18px] pt-16 pb-0 px-6 md:px-16 relative overflow-hidden mb-0" style="background-image: url('/footer-bg.png');" data-aos="fade-up">
           <div class="flex flex-col lg:flex-row items-end justify-between gap-8 h-full">
             <div class="lg:w-[55%] text-left z-30 pb-16" style="font-family: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
-              <h2 class="text-3xl md:text-4xl font-light text-white mb-8 leading-tight">
+              <h2 class="text-2xl md:text-4xl font-light text-white mb-8 leading-tight">
                 Khusapay's technology enables governments to do more. Our teams are available to help, every step of the way.
               </h2>
               <button class="group flex items-center gap-4 bg-[#F89521] hover:bg-orange-600 text-white pl-8 pr-2 py-2 rounded-full font-bold transition-all duration-300 shadow-lg shadow-orange-500/20">
@@ -316,9 +327,9 @@
                 </div>
               </button>
             </div>
-            <div class="lg:w-[45%] relative h-[320px] w-full flex justify-center lg:justify-end z-0">
-              <img src="/phone-small.png" alt="Large Phone" class="h-full w-auto object-contain object-bottom absolute bottom-0 right-[60px] md:right-[100px] z-10 drop-shadow-2xl" data-aos="fade-up" data-aos-delay="200" />
-              <img src="/phone-large.png" alt="Small Phone" class="h-[70%] w-auto object-contain absolute right-12 bottom-12 z-20 drop-shadow-2xl rounded-[2rem]" data-aos="fade-up" data-aos-delay="400" />
+            <div class="lg:w-[45%] relative h-[250px] md:h-[320px] w-full flex justify-center lg:justify-end z-0">
+              <img src="/phone-small.png" alt="Large Phone" class="h-full w-auto object-contain object-bottom absolute bottom-0 right-[40px] md:right-[100px] z-10 drop-shadow-2xl" data-aos="fade-up" data-aos-delay="200" />
+              <img src="/phone-large.png" alt="Small Phone" class="h-[70%] w-auto object-contain absolute right-4 md:right-12 bottom-8 md:bottom-12 z-20 drop-shadow-2xl rounded-[2rem]" data-aos="fade-up" data-aos-delay="400" />
             </div>
           </div>
         </div>
@@ -326,9 +337,9 @@
       </div>
     </div>
 
-    <footer class="w-full text-white py-20 bg-cover bg-center bg-no-repeat" style="background-image: url('/footer-bg.png');">
+    <footer class="w-full text-white py-12 md:py-20 bg-cover bg-center bg-no-repeat" style="background-image: url('/footer-bg.png');">
       <div class="max-w-[1078px] mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 border-white/10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12 md:mb-16 border-white/10">
           <div class="space-y-4">
             <h4 class="text-sm text-white font-medium opacity-90">Find us at</h4>
             <p class="font-bold text-white leading-tight uppercase">SHARMA ELECTRICAL CONTRACTING</p>
@@ -355,7 +366,7 @@
         </div>
         <hr class="border-white/20 mb-8" />
         <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div class="flex items-center gap-2"><img src="/Frame.png" alt="Khusapay Logo" class="h-15 w-auto object-contain" /></div>
+          <div class="flex items-center gap-2"><img src="/Frame.png" alt="Khusapay Logo" class="h-10 w-auto object-contain" /></div>
           <div class="text-xs text-gray-300 text-right">&copy; 2025 @khusapay. All Rights Reserved.</div>
         </div>
       </div>
@@ -391,7 +402,7 @@
       description: 'Khusapay is a merchant-centric, fintech powered settlement engine that offers the complete power of a bank to any establishment.',
       icon: LayoutDashboard,
       baseColor: 'orange',
-      // Gradient: Gold to Pink (Matches "Collections" in Figma)
+    
       gradient: 'from-[#FFB800] to-[#F8367C]',
       customImage: '/card-icon-1.png',
       scale: 'scale-150'
@@ -402,7 +413,7 @@
       description: 'By enhancing collection of revenue and reducing leakages, Khusa Pay saves expenditure and ensures convenience.',
       icon: ArrowLeftRight,
       baseColor: 'pink',
-      // Gradient: Gold to Pink
+      
       gradient: 'from-[#FFB800] to-[#F8367C]', 
       customImage: '/card-icon-2.png',
       scale: 'scale-125'
@@ -412,9 +423,8 @@
       titlePart2: 'Intelligence',
       description: 'Receive and disburse funds through multiple channels without worrying about the overhead of managing separate accounts.',
       icon: LineChart,
-      // FIXED: Changed baseColor from blue to orange
       baseColor: 'orange',
-      // FIXED: Changed gradient to Gold/Pink (no longer blue)
+      
       gradient: 'from-[#FFB800] to-[#F8367C]',
       customImage: '/card-icon-3.png',
       scale: 'scale-150'
@@ -423,7 +433,9 @@
 </script>
 
 <style>
+
 body {
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
