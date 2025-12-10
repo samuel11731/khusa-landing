@@ -91,249 +91,295 @@
         </div>
       </div>
     </div>
-    
-    <div class="flex justify-center mt-16">
-        <span class="px-10 py-2.5 md:px-12 md:py-3 rounded-full border border-[#027D89] text-[#027D89] text-xs md:text-sm font-bold tracking-[0.25em] uppercase bg-white shadow-[0_2px_10px_rgba(0,0,0,0.05)]">
+    <!-- Sectors -->
+   <div class="flex justify-center mt-[34px]">
+        <span class="px-[32px] py-[4px] rounded-full border-[2px] border-[#027D8921] text-[#366D88] text-[12px] font-bold tracking-[1.44px] uppercase bg-white">
           Sectors
         </span>
     </div>
 
-    <div class="bg-white text-slate-800 pt-20 md:pt-32 pb-12">
+    <div class="bg-white text-slate-800 pt-4 md:pt-8 pb-12">
       <div class="max-w-[1078px] mx-auto px-6">
         
         <div class="text-center space-y-4 mb-20 md:mb-32" data-aos="fade-up">
-          <h2 class="text-3xl md:text-5xl font-light leading-tight text-slate-900">
+          <h2 class="text-[24px] md:text-[48px] font-light leading-tight text-slate-900">
             The future of settlements is digitally <br/>
             driven, efficient, secure and transparent.
           </h2>
-          <h3 class="text-xl md:text-3xl font-bold text-slate-900">
+          <h3 class="text-[28px] md:text-[48px] font-bold text-slate-900">
             Harness this power today!
           </h3>
         </div>
-
-        <div class="w-full flex flex-col md:flex-row items-center justify-center gap-10 min-h-[400px] md:min-h-[500px] mb-20">
-          <div class="max-w-md text-left z-0" data-aos="fade-right">
-            <h3 class="text-[#F97316] text-3xl md:text-4xl font-medium mb-2">Merchant <br/> Sector Solutions</h3>
-            <p class="text-lg md:text-xl text-gray-500 leading-relaxed">
+      <!-- merchant-centric -->
+      <div class="w-full flex flex-col md:flex-row items-center justify-center gap-10 md:gap-[100px] min-h-[400px] md:min-h-[500px] mb-20">
+          
+          <div class="max-w-md text-left z-0 md:-mt-[120px]" data-aos="fade-right">
+            
+            <h3 class="text-[#F89521] text-3xl md:text-[36px] leading-tight md:leading-[41px] tracking-[0px] font-normal mb-6 md:mb-[33px]">
+              Merchant <br/> Sector Solutions
+            </h3>
+            
+            <p class="text-black text-lg md:text-[28px] leading-relaxed md:leading-[37px] tracking-[-0.2px]">
               Khusapay is a merchant-centric, fintech powered settlement engine that offers the complete power of a bank to any establishment.
             </p>
           </div>
-          <div class="relative z-10" data-aos="fade-left">
+          
+          <div class="relative z-10 mt-4 md:mt-[80px]" data-aos="fade-left">
             <div class="relative w-[190px] h-[190px] md:w-[350px] md:h-[350px] flex items-end justify-center">
                <div class="absolute inset-0 rounded-full border-4 border-white shadow-2xl bg-gray-100 z-0"></div>
                <img src="/merchant-person.png" alt="Merchant" class="relative z-10 w-[130%] max-w-none h-auto object-contain mb-0" />
             </div>
           </div>
         </div>
-
-        <div class="w-full flex flex-col md:flex-row-reverse items-center justify-center gap-16 md:gap-24 min-h-[400px] mb-20">
-          <div class="max-w-md text-left" data-aos="fade-left">
-            <h3 class="text-[#F97316] text-3xl md:text-4xl font-medium mb-2">Government & public <br/> Sector Solutions</h3>
-            <p class="text-lg md:text-xl text-gray-500 leading-relaxed">
+        <!-- Government & public Sector Solutions -->
+       <div class="w-full flex flex-col md:flex-row-reverse items-center justify-center gap-10 md:gap-[100px] min-h-[400px] md:min-h-[500px] mb-20">
+          
+          <div class="max-w-md text-left z-0 md:-mt-[120px]" data-aos="fade-left">
+            
+            <h3 class="text-[#F89521] text-3xl md:text-[36px] leading-tight md:leading-[41px] tracking-[0px] font-normal mb-6 md:mb-[33px]">
+              Government & public <br/> Sector Solutions
+            </h3>
+            
+            <p class="text-black text-lg md:text-[28px] leading-relaxed md:leading-[37px] tracking-[-0.2px]">
               By enhancing collection of revenue and reducing leakages, Khusa Pay saves expenditure and ensures convenience.
             </p>
           </div>
-          <div class="relative" data-aos="fade-right">
-            <div class="relative w-[180px] h-[180px] md:w-[300px] md:h-[300px] flex items-end justify-center">
-               <div class="absolute inset-0 rounded-full border-4 border-white shadow-2xl bg-red-500 z-0"></div>
+          
+          <div class="relative z-10 mt-14 md:mt-[80px]" data-aos="fade-right">
+            <div class="relative w-[190px] h-[190px] md:w-[350px] md:h-[350px] flex items-end justify-center">
+               <div class="absolute inset-0 rounded-full border-4 border-white shadow-2xl bg-gray-100 z-0"></div>
                <img src="/government-person.png" alt="Government" class="relative z-10 w-[130%] max-w-none h-auto object-contain mb-0" />
             </div>
           </div>
         </div>
-
-        <div class="w-full flex flex-col md:flex-row items-center justify-center gap-10 min-h-[400px]">
-          <div class="max-w-md text-left" data-aos="fade-right">
-            <h3 class="text-[#F97316] text-3xl md:text-4xl font-medium mb-2">Consumer <br/> Sector Solutions</h3>
-            <p class="text-lg md:text-xl text-gray-500 leading-relaxed">
+        <!-- Consumer Sector Solutions -->
+     <div class="w-full flex flex-col md:flex-row items-center justify-center gap-10 md:gap-[100px] min-h-[400px] md:min-h-[500px]">
+          
+          <div class="max-w-md text-left z-0 md:-mt-[120px]" data-aos="fade-right">
+            
+            <h3 class="text-[#F89521] text-3xl md:text-[36px] leading-tight md:leading-[41px] tracking-[0px] font-normal mb-6 md:mb-[33px]">
+              Consumer <br/> Sector Solutions
+            </h3>
+            
+            <p class="text-black text-lg md:text-[28px] leading-relaxed md:leading-[37px] tracking-[-0.2px]">
               Receive and disburse funds through multiple channels without worrying about the overhead of managing separate float accounts.
             </p>
           </div>
-          <div class="relative" data-aos="fade-left">
-            <div class="relative w-[210px] h-[210px] md:w-[300px] md:h-[300px] flex items-end justify-center">
+          
+          <div class="relative z-10 md:mt-[80px]" data-aos="fade-left">
+            <div class="relative w-[190px] h-[190px] md:w-[350px] md:h-[350px] flex items-end justify-center">
                <div class="absolute inset-0 rounded-full border-4 border-white shadow-2xl bg-gray-100 z-0"></div>
                <img src="/consumer-person.png" alt="Consumer" class="relative z-10 w-[130%] max-w-none h-auto object-contain mb-0" />
             </div>
           </div>
         </div>
-
-        <div class="max-w-4xl mx-auto mt-24 md:mt-32 mb-12">
-          <div class="flex justify-start mb-4" data-aos="fade-up">
-            <span class="px-3 py-1.5 rounded-full border border-[#F89521] text-[#F89521] text-xs font-bold tracking-[0.25em] uppercase bg-white shadow-[0_2px_10px_rgba(0,0,0,0.05)]">
-              Key Clients
-            </span>
-          </div>
-          <div class="flex flex-col md:flex-row items-stretch gap-8">
-            <div data-aos="zoom-in-up" data-aos-delay="200"class="bg-white rounded-[40px] p-8 max-w-sm w-full shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)]  text-center group border border-gray-50 relative overflow-hidden flex flex-col">
-              <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 to-red-400 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
-              <div class="w-[240px] h-[240px] md:w-[280px] md:h-[280px] mx-auto mb-8 relative flex items-center justify-center shrink-0">
-                <div class="absolute inset-0 rounded-full"></div>
-                <img src="/icon-coin-new.png" alt="Governments" class="w-full h-full object-contain relative z-10 drop-shadow-lg" />
-              </div>
-              <h3 class="text-3xl font-bold mb-6 text-slate-900">Governments <br/> <span class="text-orange-500">& Public Sector</span></h3>
-              <p class="text-gray-500 leading-relaxed mb-0 px-4">
-                Governments can spur thriving economies by offering convenient access to public services and utilities.
-              </p>
-            </div>
-            <div data-aos="zoom-in-up" data-aos-delay="200" class="bg-white rounded-[40px] p-8 max-w-sm w-full shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)]  transition duration-500 text-center group border border-gray-50 relative overflow-hidden flex flex-col">
-               <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-400 to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
-              <div class="w-[240px] h-[240px] md:w-[280px] md:h-[280px] mx-auto mb-8 relative flex items-center justify-center shrink-0">
-                 <div class="absolute inset-0 bg-teal-50 rounded-full scale-0"></div>
-                <img src="/icon-coin-new.png" alt="Merchants" class="w-full h-full object-contain relative z-10 drop-shadow-lg" />
-              </div>
-              <h3 class="text-3xl font-bold mb-6 text-teal-600">Merchants</h3>
-              <p class="text-gray-500 leading-relaxed mb-0 px-4">
-                From corporations to businesses, Khusa Pay tracks all financial movements through virtual accounts.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="-mx-6 bg-gradient-to-b from-[#FFFBF5] via-[#FFFBF5] to-transparent rounded-t-[40px] rounded-b-none py-12 md:py-24 px-6 md:px-16 mb-0 relative z-20">
+        <!-- Key Clients -->
+      <div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen mb-12">
           
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 mb-16 md:mb-24 items-start">
-            <div data-aos="fade-right">
-              <span class="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-[#F89521] text-xs font-bold tracking-widest uppercase mb-6">
-                Solutions
-              </span>
-              <h2 class="text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
-                Gain control over all financial transactions easily and securely
-              </h2>
-            </div>
-            <div data-aos="fade-left" class="pt-0 md:pt-16">
-              <p class="text-gray-600 text-lg leading-relaxed">
-                With Khusapay you will experience a simple, fast and efficient payment system again, again and again. Your transactions are fully protected against fraud and you can have peace of mind that your transactions are secure.
-              </p>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-12 md:gap-y-16 mb-12">
-            <div data-aos="fade-up" data-aos-delay="0" class="group">
-              <div class="mb-6 md:mb-8 transform group-hover:-translate-y-2 transition duration-300">
-                <img src="/icon-3d-cube.png" class="w-16 h-16 drop-shadow-xl" alt="icon"/>
-              </div>
-              <h3 class="text-xl font-bold text-slate-900 mb-4">Complete Payment <br/> Transparency</h3>
-              <p class="text-gray-500 text-sm leading-relaxed">
-                Khusapay enables real-time settlements and reconciliations by enabling payments to various parties through virtual accounts.
-              </p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="200" class="group">
-              <div class="mb-6 md:mb-8 transform group-hover:-translate-y-2 transition duration-300">
-                <img src="/icon-3d-cube.png" class="w-16 h-16 drop-shadow-xl" alt="icon"/>
-              </div>
-              <h3 class="text-xl font-bold text-slate-900 mb-4">Global Visibility & <br/> Tighter Controls</h3>
-              <p class="text-gray-500 text-sm leading-relaxed">
-                With complete control to track and manage settlements, Khusapay offers comprehensive reporting and management all in one.
-              </p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="400" class="group">
-              <div class="mb-6 md:mb-8 transform group-hover:-translate-y-2 transition duration-300">
-                <img src="/icon-3d-cube.png" class="w-16 h-16 drop-shadow-xl" alt="icon"/>
-              </div>
-              <h3 class="text-xl font-bold text-slate-900 mb-4">Actionable Financial <br/> Information</h3>
-              <p class="text-gray-500 text-sm leading-relaxed">
-                Khusapay provides data and gives analytics that give insights on trends specific to services or customers.
-              </p>
-            </div>
-          </div>
-
-          <div class="mt-12 md:mt-20 ml-0 md:ml-0" data-aos="fade-right">
-             <span class="font-bold uppercase text-[#F89521] text-[12px] leading-[16px] tracking-[1.44px]" style="font-family: 'Inter', sans-serif;">
-               Multi Channel Payments
-             </span>
-          </div>
-
-        </div>
-
-       <div class="w-full mb-20 -mt-10 md:-mt-24 relative z-10 px-4 md:px-0"> 
+          <div class="md:ml-[45px] md:mt-[10px] w-full h-auto border border-white relative">
             
-            <div 
-              class="mx-auto max-w-6xl bg-gradient-to-b from-[#F0F4FF] to-white rounded-[40px] md:rounded-[50px] pb-12 pt-0 md:pt-16 px-6 md:px-16 relative shadow-xl border border-white/50"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
+            <div class="w-full h-full md:pt-[2px] md:pl-[234px] px-4 py-8 md:py-0">
               
-              <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 relative z-10">
+             <div class="flex justify-start mb-[23.9px]" data-aos="fade-up">
                 
-                <div 
-                  class="relative -mt-1 mb-8 flex justify-center md:absolute md:top-[-100px] md:left-1/3 md:-translate-x-1/2 md:mt-0 md:mb-0 z-20"
-                  data-aos="zoom-in"
-                  data-aos-duration="1200"
-                  data-aos-delay="200"
-                >
-                  <img 
-                    src="/hand-with-phone.png" 
-                    alt="Khusapay App" 
-                    class="w-[180px] md:w-[280px] max-w-none drop-shadow-2xl" 
-                  />
+                <span class="px-[20px] py-[5px] rounded-full border-[2px] border-[#F1F1F1] text-[#F89521] text-xs font-bold tracking-[1.44px] uppercase bg-white">
+                  Key Clients
+                </span>
+              </div>
+
+              <div class="flex flex-col md:flex-row items-stretch gap-8">
+                
+                <div data-aos="zoom-in-up" data-aos-delay="200" class="bg-white rounded-[40px] p-8 md:w-[400px] md:h-[640px] w-full shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] text-center group border border-gray-50 relative overflow-hidden flex flex-col">
+                  <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 to-red-400 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
+                  <div class="w-[240px] h-[240px] md:w-[280px] md:h-[280px] mx-auto mb-8 relative flex items-center justify-center shrink-0">
+                    <div class="absolute inset-0 rounded-full"></div>
+                    <img src="/icon-coin-new.png" alt="Governments" class="w-full h-full object-contain relative z-10 drop-shadow-lg" />
+                  </div>
+                 <h3 class="text-[40px] tracking-[-0.23px] font-normal mb-6 text-[#F89521] leading-tight">
+                    Governments <br/> 
+                    <span class="text-[#F89521]">& Public Sector</span>
+                  </h3>
+                  <p class="text-black leading-relaxed mb-0 px-4">
+                    Governments can spur thriving economies by offering convenient access to public services and utilities.
+                  </p>
                 </div>
 
-                <div class="flex flex-col gap-8 md:gap-12 w-full md:w-1/3 pt-2 md:pt-0">
-                  <div class="flex items-center gap-4 group" data-aos="fade-right" data-aos-delay="300">
-                    <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-sm">
-                      <img src="/icon-credit-card.png" alt="Credit Card" class="w-8 h-8 object-contain" />
-                    </div>
-                    <div>
-                      <h3 class="text-lg font-bold text-[#0F172A] mb-1">Credit/Debit Cards</h3>
-                      <p class="text-slate-500 text-xs md:text-sm leading-relaxed">Promptly send money to friends and pay bills on time.</p>
-                    </div>
+                <div data-aos="zoom-in-up" data-aos-delay="200" class="bg-white rounded-[40px] p-8 md:w-[400px] md:h-[640px] w-full shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] transition duration-500 text-center group border border-gray-50 relative overflow-hidden flex flex-col">
+                   <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-400 to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
+                  <div class="w-[240px] h-[240px] md:w-[280px] md:h-[280px] mx-auto mb-8 relative flex items-center justify-center shrink-0">
+                     <div class="absolute inset-0 bg-teal-50 rounded-full scale-0"></div>
+                    <img src="/icon-coin-new.png" alt="Merchants" class="w-full h-full object-contain relative z-10 drop-shadow-lg" />
                   </div>
-                  <div class="flex items-center gap-4 group" data-aos="fade-right" data-aos-delay="400">
-                    <div class="w-16 h-16 rounded-full bg-cyan-100 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-sm">
-                      <img src="/icon-mobile-money.png" alt="Mobile Money" class="w-8 h-8 object-contain" />
-                    </div>
-                    <div>
-                      <h3 class="text-lg font-bold text-[#0F172A] mb-1">Mobile Money</h3>
-                      <p class="text-slate-500 text-xs md:text-sm leading-relaxed">Be assured privacy and security through use of tools.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="hidden md:block w-1/3"></div>
-
-                <div class="flex flex-col gap-8 md:gap-12 w-full md:w-1/3 pt-2 md:pt-0">
-                  <div class="flex items-center gap-4 group" data-aos="fade-left" data-aos-delay="300">
-                    <div class="w-16 h-16 rounded-full bg-indigo-100 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-sm">
-                      <img src="/icon-bank.png" alt="Bank Account" class="w-8 h-8 object-contain" />
-                    </div>
-                    <div>
-                      <h3 class="text-lg font-bold text-[#0F172A] mb-1">Bank Account</h3>
-                      <p class="text-slate-500 text-xs md:text-sm leading-relaxed">Send money to or receive money from other users.</p>
-                    </div>
-                  </div>
-                  <div class="flex items-center gap-4 group" data-aos="fade-left" data-aos-delay="400">
-                    <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-sm">
-                      <img src="/icon-transfer.png" alt="Bank Transfer" class="w-8 h-8 object-contain" />
-                    </div>
-                    <div>
-                      <h3 class="text-lg font-bold text-[#0F172A] mb-1">Bank Transfer</h3>
-                      <p class="text-slate-500 text-xs md:text-sm leading-relaxed">Easily withdraw money from any agent countrywide.</p>
-                    </div>
-                  </div>
+                  <h3 class="text-[40px] tracking-[-0.23px] font-normal mb-16 text-[#027D89]">Merchants</h3>
+                  <p class="text-black leading-relaxed mb-0 px-4">
+                    From corporations to businesses, Khusa Pay tracks all financial movements through virtual accounts.
+                  </p>
                 </div>
 
               </div>
             </div>
-        </div>
-        <div class="-mx-6 bg-cover bg-center bg-no-repeat text-white rounded-[18px] pt-16 pb-0 px-6 md:px-16 relative overflow-hidden mb-0" style="background-image: url('/footer-bg.png');" data-aos="fade-up">
-          <div class="flex flex-col lg:flex-row items-end justify-between gap-8 h-full">
-            <div class="lg:w-[55%] text-left z-30 pb-16" style="font-family: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
-              <h2 class="text-2xl md:text-4xl font-light text-white mb-8 leading-tight">
-                Khusapay's technology enables governments to do more. Our teams are available to help, every step of the way.
-              </h2>
-              <button class="group flex items-center gap-4 bg-[#F89521] hover:bg-orange-600 text-white pl-8 pr-2 py-2 rounded-full font-bold transition-all duration-300 shadow-lg shadow-orange-500/20">
-                <span>Talk to us today</span>
-                <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center transition-transform duration-300 group-hover:rotate-45 group-hover:scale-105">
-                  <ArrowUpRight class="w-6 h-6 text-[#F89521]" />
-                </div>
-              </button>
-            </div>
-            <div class="lg:w-[45%] relative h-[250px] md:h-[320px] w-full flex justify-center lg:justify-end z-0">
-              <img src="/phone-small.png" alt="Large Phone" class="h-full w-auto object-contain object-bottom absolute bottom-0 right-[40px] md:right-[100px] z-10 drop-shadow-2xl" data-aos="fade-up" data-aos-delay="200" />
-              <img src="/phone-large.png" alt="Small Phone" class="h-[70%] w-auto object-contain absolute right-4 md:right-12 bottom-8 md:bottom-12 z-20 drop-shadow-2xl rounded-[2rem]" data-aos="fade-up" data-aos-delay="400" />
-            </div>
           </div>
         </div>
+        
+       <!-- Solutions -->
 
+<div class="w-[calc(100vw-32px)] md:w-[calc(100vw-82px)] relative left-1/2 -translate-x-1/2 bg-gradient-to-b from-[#f5ebdd] via-[#f0ece5] via-10% to-[#e6f1f3] to-70% rounded-t-[30px] md:rounded-t-[40px] rounded-b-none pt-12 md:pt-[84px] px-6 md:pl-[143px] md:pr-16 pb-12 md:pb-24 mb-0 z-20">
+  
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 mb-12 md:mb-24 items-start">
+    <div data-aos="fade-right">
+      
+      <span class="inline-block px-[26px] py-[5px] rounded-full bg text-[#F89521] border-[2px] border-[#FFFFFF] text-xs font-bold tracking-widest uppercase mb-6">
+        Solutions
+      </span>
+
+      <h2 class="text-3xl md:text-[40px] font-medium text-black leading-tight">
+        Gain control over all financial transactions easily and securely
+      </h2>
+    </div>
+    
+    <div data-aos="fade-left" class="pt-0 md:pt-16 md:w-[115%] md:-ml-[40px]">
+      <p class="text-[#000000] text-lg md:text-[24px] leading-relaxed tracking-[0]">
+        With Khusapay you will experience a simple, fast and efficient payment system again, again and again. Your transactions are fully protected against fraud and you can have peace of mind that your transactions are secure.
+      </p>
+    </div>
+  </div>
+  
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-12 md:gap-y-16 mb-12">
+    
+    <div data-aos="fade-up" data-aos-delay="0" class="group">
+      <div class="mb-6 md:mb-8 transform group-hover:-translate-y-2 transition duration-300">
+        <img src="/icon-3d-cube.png" class="w-16 h-16 drop-shadow-xl" alt="icon"/>
+      </div>
+      <h3 class="text-xl md:text-[24px] font-bold text-[#1D275C] mb-4 md:mb-6">Complete Payment <br/> Transparency</h3>
+      <p class="text-[#000000] text-base md:text-[18px] leading-relaxed tracking-[0]">
+        Khusapay enables real-time settlements and reconciliations by enabling payments to various parties through virtual accounts.
+      </p>
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="200" class="group">
+      <div class="mb-6 md:mb-8 transform group-hover:-translate-y-2 transition duration-300">
+        <img src="/icon-3d-cube.png" class="w-16 h-16 drop-shadow-xl" alt="icon"/>
+      </div>
+      <h3 class="text-xl md:text-[24px] font-bold text-[#1D275C] mb-4 md:mb-6">Global Visibility & <br/> Tighter Controls</h3>
+      <p class="text-[#000000] text-base md:text-[18px] leading-relaxed tracking-[0]">
+        With complete control to track and manage settlements, Khusapay offers comprehensive reporting and management all in one.
+      </p>
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="400" class="group">
+      <div class="mb-6 md:mb-8 transform group-hover:-translate-y-2 transition duration-300">
+        <img src="/icon-3d-cube.png" class="w-16 h-16 drop-shadow-xl" alt="icon"/>
+      </div>
+      <h3 class="text-xl md:text-[24px] font-bold text-[#1D275C] mb-4 md:mb-6">Actionable Financial <br/> Information</h3>
+      <p class="text-[#000000] text-base md:text-[18px] leading-relaxed tracking-[0]">
+        Khusapay provides data and gives analytics that give insights on trends specific to services or customers.
+      </p>
+    </div>
+
+  </div>
+
+
+  <!--multi channel payments-->
+ <div class="mt-12 md:mt-20 ml-0 md:ml-[0px]" data-aos="fade-right">
+  
+  <span class="inline-block px-[4px] py-[5px] rounded-full border-[2px] border-[#F1F1F1] font-bold uppercase text-[#F89521] text-[14px] leading-[16px] tracking-[1.44px]" style="font-family: 'Inter', sans-serif;">
+    Multi Channel Payments
+  </span>
+
+</div>
+
+ <div class="w-full mt-12 mb-0 relative z-10 px-0 md:px-0"> 
+  <div 
+   class="mx-auto max-w-6xl bg-center bg-no-repeat rounded-[20px] md:rounded-[40px] pb-12 pt-0 md:pt-16 px-6 md:px-16 relative border-[11.41px] border-[#87a1f0a5]/30"
+  style="background-image: url('/payment-bg.png');"
+  data-aos="fade-up"
+  data-aos-duration="1000"
+>
+    <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 relative z-10">
+      
+      <div 
+        class="relative -mt-1 mb-8 flex justify-center md:absolute md:top-[-100px] md:left-1/3 md:-translate-x-1/2 md:mt-0 md:mb-0 z-20"
+        data-aos="zoom-in"
+        data-aos-duration="1200"
+        data-aos-delay="200"
+      >
+        <img 
+          src="/hand-with-phone.png" 
+          alt="Khusapay App" 
+          class="w-[180px] md:w-[280px] max-w-none" 
+        />
+      </div>
+
+      <div class="flex flex-col gap-8 md:gap-12 w-full md:w-1/3 pt-2 md:pt-0">
+        <div class="flex items-center gap-4 group" data-aos="fade-right" data-aos-delay="300">
+          <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-md">
+            <img src="/icon-credit-card.png" alt="Credit Card" class="w-8 h-8 object-contain" />
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-[#0F172A] mb-1">Credit/Debit Cards</h3>
+            <p class="text-slate-500 text-xs md:text-sm leading-relaxed">Promptly send money to friends and pay bills on time.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 group" data-aos="fade-right" data-aos-delay="400">
+          <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-md">
+            <img src="/icon-mobile-money.png" alt="Mobile Money" class="w-8 h-8 object-contain" />
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-[#0F172A] mb-1">Mobile Money</h3>
+            <p class="text-slate-500 text-xs md:text-sm leading-relaxed">Be assured privacy and security through use of tools.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden md:block w-1/3"></div>
+
+      <div class="flex flex-col gap-8 md:gap-12 w-full md:w-1/3 pt-2 md:pt-0">
+        <div class="flex items-center gap-4 group" data-aos="fade-left" data-aos-delay="300">
+          <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-md">
+            <img src="/icon-bank.png" alt="Bank Account" class="w-8 h-8 object-contain" />
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-[#0F172A] mb-1">Bank Account</h3>
+            <p class="text-slate-500 text-xs md:text-sm leading-relaxed">Send money to or receive money from other users.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 group" data-aos="fade-left" data-aos-delay="400">
+          <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-md">
+            <img src="/icon-transfer.png" alt="Bank Transfer" class="w-8 h-8 object-contain" />
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-[#0F172A] mb-1">Bank Transfer</h3>
+            <p class="text-slate-500 text-xs md:text-sm leading-relaxed">Easily withdraw money from any agent countrywide.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+  
+
+<div class="-mx-6 bg-cover bg-center bg-no-repeat text-white rounded-[18px] pt-16 pb-0 px-6 md:px-16 relative overflow-hidden mb-0" style="background-image: url('/footer-bg.png');" data-aos="fade-up">
+  <div class="flex flex-col lg:flex-row items-end justify-between gap-8 h-full">
+    <div class="lg:w-[55%] text-left z-30 pb-16" style="font-family: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+      <h2 class="text-2xl md:text-4xl font-light text-white mb-8 leading-tight">
+        Khusapay's technology enables governments to do more. Our teams are available to help, every step of the way.
+      </h2>
+      <button class="group flex items-center gap-4 bg-[#F89521] hover:bg-orange-600 text-white pl-8 pr-2 py-2 rounded-full font-bold transition-all duration-300 shadow-lg shadow-orange-500/20">
+        <span>Talk to us today</span>
+        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center transition-transform duration-300 group-hover:rotate-45 group-hover:scale-105">
+          <ArrowUpRight class="w-6 h-6 text-[#F89521]" />
+        </div>
+      </button>
+    </div>
+    <div class="lg:w-[45%] relative h-[250px] md:h-[320px] w-full flex justify-center lg:justify-end z-0">
+      <img src="/phone-small.png" alt="Large Phone" class="h-full w-auto object-contain object-bottom absolute bottom-0 right-[40px] md:right-[100px] z-10 drop-shadow-2xl" data-aos="fade-up" data-aos-delay="200" />
+      <img src="/phone-large.png" alt="Small Phone" class="h-[70%] w-auto object-contain absolute right-4 md:right-12 bottom-8 md:bottom-12 z-20 drop-shadow-2xl rounded-[2rem]" data-aos="fade-up" data-aos-delay="400" />
+    </div>
+  </div>
+</div>
       </div>
     </div>
 
