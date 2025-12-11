@@ -223,7 +223,7 @@
         
        <!-- Solutions -->
 
-<div class="w-[calc(100vw-32px)] md:w-[calc(100vw-82px)] relative left-1/2 -translate-x-1/2 bg-gradient-to-b from-[#f5ebdd] via-[#f0ece5] via-10% to-[#e6f1f3] to-70% rounded-t-[30px] md:rounded-t-[40px] rounded-b-none pt-12 md:pt-[84px] px-6 md:pl-[143px] md:pr-16 pb-12 md:pb-24 mb-0 z-20">
+<div class="w-[calc(100vw-32px)] md:w-[calc(100vw-82px)] relative left-1/2 -translate-x-1/2 bg-gradient-to-b from-[#f5ebdd] via-[#f0ece5] via-10% to-[#e6f1f3] to-70% rounded-t-[30px] md:rounded-t-[30px] rounded-b-none pt-12 md:pt-[84px] px-6 md:pl-[143px] md:pr-16 pb-12 md:pb-24 mb-0 z-20">
   
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 mb-12 md:mb-24 items-start">
     <div data-aos="fade-right">
@@ -289,15 +289,17 @@
 
 </div>
 
- <div class="w-full mt-12 mb-0 relative z-10 px-0 md:px-0"> 
+<div class="w-full mt-12 mb-0 relative z-10 px-0 md:px-0"> 
+  
   <div 
-   class="mx-auto max-w-6xl bg-center bg-no-repeat rounded-[20px] md:rounded-[40px] pb-12 pt-0 md:pt-16 px-6 md:px-16 relative border-[11.41px] border-[#87a1f0a5]/30"
-  style="background-image: url('/payment-bg.png');"
-  data-aos="fade-up"
-  data-aos-duration="1000"
->
-    <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 relative z-10">
-      
+    class="mx-auto max-w-[1200px] w-full bg-contain bg-center bg-no-repeat relative py-12 md:py-24"
+    style="background-image: url('/credit-card-mockup.png'); min-height: 600px;"
+    data-aos="fade-up"
+    data-aos-duration="1000"
+  >
+    
+    <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 px-6 relative z-10">
+       
       <div 
         class="relative -mt-1 mb-8 flex justify-center md:absolute md:top-[-100px] md:left-1/3 md:-translate-x-1/2 md:mt-0 md:mb-0 z-20"
         data-aos="zoom-in"
