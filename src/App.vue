@@ -223,7 +223,7 @@
         
        <!-- Solutions -->
 
-<div class="w-[calc(100vw-32px)] md:w-[calc(100vw-82px)] relative left-1/2 -translate-x-1/2 bg-gradient-to-b from-[#f5ebdd] via-[#f0ece5] via-10% to-[#e6f1f3] to-70% rounded-t-[30px] md:rounded-t-[30px] rounded-b-none pt-12 md:pt-[84px] px-6 md:pl-[143px] md:pr-16 pb-12 md:pb-24 mb-0 z-20">
+<div class="w-[calc(100vw-32px)] md:w-[calc(100vw-82px)] relative left-1/2 -translate-x-1/2 bg-gradient-to-b from-[#fff6e9] via-[#fff3dc] via-10% to-[#f5feff] to-70% rounded-t-[30px] md:rounded-t-[30px] rounded-b-none pt-12 md:pt-[84px] px-6 md:pl-[143px] md:pr-16 pb-12 md:pb-24 mb-0 z-20">
   
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 mb-12 md:mb-24 items-start">
     <div data-aos="fade-right">
@@ -232,7 +232,7 @@
         Solutions
       </span>
 
-      <h2 class="text-3xl md:text-[40px] font-medium text-black leading-tight">
+      <h2 class="text-3xl md:text-[40px] font-medium text-black sm:leading-[55px]">
         Gain control over all financial transactions easily and securely
       </h2>
     </div>
