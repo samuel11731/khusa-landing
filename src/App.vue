@@ -15,12 +15,8 @@
 </div>
 
         <div class="flex items-center gap-4">
-          <button class="px-4 py-1 md:px-8 md:py-2.5 bg-[#F89521] hover:bg-[#F89521]/80 rounded-full text-xs md:text-sm font-bold transition shadow-lg shadow-orange-orange/20">
-            Sign up
-          </button>
-          <button class="px-4 py-1 md:px-8 md:py-2.5 bg-white text-black hover:bg-gray-100 rounded-full text-xs md:text-sm font-bold transition">
-            Sign in
-          </button>
+          <Button variant="primary">Sign up</Button>
+          <Button variant="secondary">Sign in</Button>
         </div>
       </nav>
 
@@ -28,11 +24,7 @@
       <div class="px-4 pt-10 md:pt-20 pb-10 md:pb-[65px] max-w-[1078px] mx-auto text-center flex flex-col items-center gap-6 md:gap-[27px] relative z-10">
         <div class="bg-gradient-to-br from-white to-[#F89521] xl:w-[980px] bg-clip-text">
           <h1 
-            class="text-2xl md:text-[86px] font-light leading-[1.1] md:leading-[1] tracking-[-0.2px] flex flex-col items-center gap-2 md:gap-4 w-full text-transparent" 
-            
-            style="
-              font-family: 'Inter', sans-serif;
-            "
+            class="font-inter text-2xl md:text-[86px] font-light leading-[1.1] md:leading-[1] tracking-[-0.2px] flex flex-col items-center gap-2 md:gap-4 w-full text-transparent"
           >
             The Ultimate Payment &
             Settlement Platform
@@ -42,17 +34,17 @@
         <div class="flex flex-wrap justify-center items-center gap-3 md:gap-4 mt-4 md:mt-8" data-aos="fade-up" data-aos-delay="200">
           <span class="text-gray-400 text-sm font-medium mr-2">for</span>
           
-          <a href="#" v-for="(category, index) in categories" :key="category"
+          <a href="#" v-for="(category, index) in CATEGORIES" :key="category"
              :data-aos="index % 2 === 0 ? 'flip-up' : 'flip-down'"
              :data-aos-delay="index * 100"
-             class="px-5 py-2 md:px-6 md:py-2 bg-[#8B5E3C] hover:bg-[#6d4a30] hover:scale-105 active:scale-95 transition-all duration-300 rounded-full text-xs md:text-sm font-medium text-white shadow-sm"
+             class="px-5 py-2 md:px-6 md:py-2 bg-brand-brown hover:bg-brand-brown-dark hover:scale-105 active:scale-95 transition-all duration-300 rounded-full text-xs md:text-sm font-medium text-white shadow-sm"
           >
             {{ category }}
           </a>
 
-          <button class="w-10 h-10 md:w-8 md:h-8 bg-orange-500 hover:bg-orange-600 rounded-full flex items-center justify-center text-white transition duration-300 shadow-lg shadow-orange-500/30 hover:scale-110 active:scale-95 ml-2">
+          <Button variant="icon" size="sm" customClass="ml-2">
              <ChevronRight class="w-5 h-5 md:w-6 md:h-6" />
-          </button>
+          </Button>
         </div>
 
         <p class="text-gray-300 max-w-4xl mx-auto text-[18px] md:text-[27px] leading-relaxed font-light mt-2 md:mt-2" data-aos="fade-up" data-aos-delay="300">
@@ -60,8 +52,8 @@
   growing your Business and planning for the future.
 </p>
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-6 w-full mt-20 md:mt-32">
-          <div v-for="(feature, index) in features" :key="index"
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 gap-y-32 md:gap-y-8 px-4 md:px-6 w-full mt-20 md:mt-32">
+          <div v-for="(feature, index) in FEATURES" :key="index"
                data-aos="fade-up"
                :data-aos-delay="index * 200"
                class="p-8 rounded-[32px] border backdrop-blur-md transition duration-500 group text-left relative bg-white/5 border-white/5 hover:bg-white/10"
@@ -91,88 +83,94 @@
         </div>
       </div>
     </div>
-    <!-- Sectors -->
-   <div class="flex justify-center mt-[34px]">
-        <span class="px-[32px] py-[4px] rounded-full border-[2px] border-[#027D8921] text-[#366D88] text-[12px] font-bold tracking-[1.44px] uppercase bg-white">
-          Sectors
-        </span>
-    </div>
+   <!-- Sectors -->
 
-    <div class="bg-white text-slate-800 pt-4 md:pt-8 pb-12">
-      <div class="max-w-[1078px] mx-auto px-6">
-        
-        <div class="text-center space-y-4 mb-20 md:mb-32" data-aos="fade-up">
-          <h2 class="text-[24px] md:text-[48px] font-light leading-tight text-slate-900">
-            The future of settlements is digitally <br/>
-            driven, efficient, secure and transparent.
-          </h2>
-          <h3 class="text-[28px] md:text-[48px] font-bold text-slate-900">
-            Harness this power today!
-          </h3>
-        </div>
+  
+  <div class="flex justify-center mt-[34px]">
+    <Badge variant="blue" size="lg">Sectors</Badge>
+  </div>
+
+  <div class="bg-white text-slate-800 pt-4 md:pt-8 pb-12">
+    <div class="max-w-[1078px] mx-auto px-6">
+      
+      <div class="text-center space-y-4 mb-20 md:mb-32" data-aos="fade-up">
+        <h2 class="text-[24px] md:text-[48px] font-light leading-tight text-slate-900">
+          The future of settlements is digitally <br/>
+          driven, efficient, secure and transparent.
+        </h2>
+        <h3 class="text-[28px] md:text-[48px] font-bold text-slate-900">
+          Harness this power today!
+        </h3>
+      </div>
+      
       <!-- merchant-centric -->
       <div class="w-full flex flex-col md:flex-row items-center justify-center gap-10 md:gap-[100px] min-h-[400px] md:min-h-[500px] mb-20">
+        
+        <div class="max-w-md text-left z-0 md:-mt-[120px]" data-aos="fade-right">
           
-          <div class="max-w-md text-left z-0 md:-mt-[120px]" data-aos="fade-right">
-            
-            <h3 class="text-[#F89521] text-3xl md:text-[36px] leading-tight md:leading-[41px] tracking-[0px] font-normal mb-6 md:mb-[33px]">
-              Merchant <br/> Sector Solutions
-            </h3>
-            
-            <p class="text-black text-lg md:text-[28px] leading-relaxed md:leading-[37px] tracking-[-0.2px]">
-              Khusapay is a merchant-centric, fintech powered settlement engine that offers the complete power of a bank to any establishment.
-            </p>
-          </div>
+          <h3 class="text-[#F89521] text-3xl md:text-[36px] leading-tight md:leading-[41px] tracking-[0px] font-normal mb-6 md:mb-[33px]">
+            Merchant <br/> Sector Solutions
+          </h3>
           
-          <div class="relative z-10 mt-4 md:mt-[80px]" data-aos="fade-left">
-            <div class="relative w-[190px] h-[190px] md:w-[350px] md:h-[350px] flex items-end justify-center">
-               <div class="absolute inset-0 rounded-full border-4 border-white shadow-2xl bg-gray-100 z-0"></div>
-               <img src="/merchant-person.png" alt="Merchant" class="relative z-10 w-[130%] max-w-none h-auto object-contain mb-0" />
-            </div>
+          <p class="text-black text-lg md:text-[28px] leading-relaxed md:leading-[37px] tracking-[-0.2px]">
+            Khusapay is a merchant-centric, fintech powered settlement engine that offers the complete power of a bank to any establishment.
+          </p>
+        </div>
+        
+        <div class="relative z-10 mt-4 md:mt-[80px]" data-aos="fade-left">
+          <div class="relative w-[190px] h-[190px] md:w-[350px] md:h-[350px] flex items-end justify-center">
+            <div class="absolute inset-0 rounded-full border-4 border-white shadow-2xl bg-gray-100 z-0"></div>
+            <img src="/merchant-person.png" alt="Merchant" class="relative z-10 w-[130%] max-w-none h-auto object-contain mb-0" />
           </div>
         </div>
-        <!-- Government & public Sector Solutions -->
-       <div class="w-full flex flex-col md:flex-row-reverse items-center justify-center gap-10 md:gap-[100px] min-h-[400px] md:min-h-[500px] mb-20">
+      </div>
+      
+      <!-- Government & public Sector Solutions -->
+      <div class="w-full flex flex-col md:flex-row-reverse items-center justify-center gap-10 md:gap-[100px] min-h-[400px] md:min-h-[500px] mb-20">
+        
+        <div class="max-w-md text-left z-0 md:-mt-[120px]" data-aos="fade-left">
           
-          <div class="max-w-md text-left z-0 md:-mt-[120px]" data-aos="fade-left">
-            
-            <h3 class="text-[#F89521] text-3xl md:text-[36px] leading-tight md:leading-[41px] tracking-[0px] font-normal mb-6 md:mb-[33px]">
-              Government & public <br/> Sector Solutions
-            </h3>
-            
-            <p class="text-black text-lg md:text-[28px] leading-relaxed md:leading-[37px] tracking-[-0.2px]">
-              By enhancing collection of revenue and reducing leakages, Khusa Pay saves expenditure and ensures convenience.
-            </p>
-          </div>
+          <h3 class="text-[#F89521] text-3xl md:text-[36px] leading-tight md:leading-[41px] tracking-[0px] font-normal mb-6 md:mb-[33px]">
+            Government & public <br/> Sector Solutions
+          </h3>
           
-          <div class="relative z-10 mt-14 md:mt-[80px]" data-aos="fade-right">
-            <div class="relative w-[190px] h-[190px] md:w-[350px] md:h-[350px] flex items-end justify-center">
-               <div class="absolute inset-0 rounded-full border-4 border-white shadow-2xl bg-gray-100 z-0"></div>
-               <img src="/government-person.png" alt="Government" class="relative z-10 w-[130%] max-w-none h-auto object-contain mb-0" />
-            </div>
+          <p class="text-black text-lg md:text-[28px] leading-relaxed md:leading-[37px] tracking-[-0.2px]">
+            By enhancing collection of revenue and reducing leakages, Khusa Pay saves expenditure and ensures convenience.
+          </p>
+        </div>
+        
+        <div class="relative z-10 mt-14 md:mt-[80px]" data-aos="fade-right">
+          <div class="relative w-[190px] h-[190px] md:w-[350px] md:h-[350px] flex items-end justify-center">
+            <div class="absolute inset-0 rounded-full border-4 border-white shadow-2xl bg-gray-100 z-0"></div>
+            <img src="/government-person.png" alt="Government" class="relative z-10 w-[130%] max-w-none h-auto object-contain mb-0" />
           </div>
         </div>
-        <!-- Consumer Sector Solutions -->
-     <div class="w-full flex flex-col md:flex-row items-center justify-center gap-10 md:gap-[100px] min-h-[400px] md:min-h-[500px]">
+      </div>
+      
+      <!-- Consumer Sector Solutions -->
+      <div class="w-full flex flex-col md:flex-row items-center justify-center gap-10 md:gap-[100px] min-h-[400px] md:min-h-[500px]">
+        
+        <div class="max-w-md text-left z-0 md:-mt-[120px]" data-aos="fade-right">
           
-          <div class="max-w-md text-left z-0 md:-mt-[120px]" data-aos="fade-right">
-            
-            <h3 class="text-[#F89521] text-3xl md:text-[36px] leading-tight md:leading-[41px] tracking-[0px] font-normal mb-6 md:mb-[33px]">
-              Consumer <br/> Sector Solutions
-            </h3>
-            
-            <p class="text-black text-lg md:text-[28px] leading-relaxed md:leading-[37px] tracking-[-0.2px]">
-              Receive and disburse funds through multiple channels without worrying about the overhead of managing separate float accounts.
-            </p>
-          </div>
+          <h3 class="text-[#F89521] text-3xl md:text-[36px] leading-tight md:leading-[41px] tracking-[0px] font-normal mb-6 md:mb-[33px]">
+            Consumer <br/> Sector Solutions
+          </h3>
           
-          <div class="relative z-10 md:mt-[80px]" data-aos="fade-left">
-            <div class="relative w-[190px] h-[190px] md:w-[350px] md:h-[350px] flex items-end justify-center">
-               <div class="absolute inset-0 rounded-full border-4 border-white shadow-2xl bg-gray-100 z-0"></div>
-               <img src="/consumer-person.png" alt="Consumer" class="relative z-10 w-[130%] max-w-none h-auto object-contain mb-0" />
-            </div>
+          <p class="text-black text-lg md:text-[28px] leading-relaxed md:leading-[37px] tracking-[-0.2px]">
+            Receive and disburse funds through multiple channels without worrying about the overhead of managing separate float accounts.
+          </p>
+        </div>
+        
+        <div class="relative z-10 md:mt-[80px]" data-aos="fade-left">
+          <div class="relative w-[190px] h-[190px] md:w-[350px] md:h-[350px] flex items-end justify-center">
+            <div class="absolute inset-0 rounded-full border-4 border-white shadow-2xl bg-gray-100 z-0"></div>
+            <img src="/consumer-person.png" alt="Consumer" class="relative z-10 w-[130%] max-w-none h-auto object-contain mb-0" />
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
         <!-- Key Clients -->
       <div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen mb-12">
           
@@ -182,9 +180,7 @@
               
              <div class="flex justify-start mb-[23.9px]" data-aos="fade-up">
                 
-                <span class="px-[20px] py-[5px] rounded-full border-[2px] border-[#F1F1F1] text-[#F89521] text-xs font-bold tracking-[1.44px] uppercase bg-white">
-                  Key Clients
-                </span>
+                <Badge variant="orange">Key Clients</Badge>
               </div>
 
               <div class="flex flex-col md:flex-row items-stretch gap-8">
@@ -218,12 +214,10 @@
 
               </div>
             </div>
-          </div>
-        </div>
+          
         
        <!-- Solutions -->
-
-<div class="w-[calc(100vw-32px)] md:w-[calc(100vw-82px)] relative left-1/2 -translate-x-1/2 bg-gradient-to-b from-[#fff6e9] via-[#fff3dc] via-10% to-[#f5feff] to-70% rounded-t-[30px] md:rounded-t-[30px] rounded-b-none pt-12 md:pt-[84px] px-6 md:pl-[143px] md:pr-16 pb-12 md:pb-24 mb-0 z-20">
+<div class=" w-[350px]  md:w-[1200px] relative left-[50%] md:left-[46.9%] -translate-x-1/2 rounded-t-[30px] md:rounded-t-[30px] rounded-b-none pt-12 md:pt-[84px] px-6 md:pl-[143px] md:pr-16 pb-16 md:pb-16 mb-0 z-20" style="background: linear-gradient(to bottom, #fff6e9 0%, #fff3dc 10%, #e9f7f9 70%, transparent 100%);">
   
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 mb-12 md:mb-24 items-start">
     <div data-aos="fade-right">
@@ -280,28 +274,36 @@
   </div>
 
 
-  <!--multi channel payments-->
- <div class="mt-12 md:mt-20 ml-0 md:ml-[0px]" data-aos="fade-right">
+ 
+<!--multi channel payments-->
+<div class="mt-12 md:mt-12 ml-0 md:ml-[0px]" data-aos="fade-right">
   
-  <span class="inline-block px-[4px] py-[5px] rounded-full border-[2px] border-[#F1F1F1] font-bold uppercase text-[#F89521] text-[14px] leading-[16px] tracking-[1.44px]" style="font-family: 'Inter', sans-serif;">
+  <Badge variant="orange-border" customClass="font-inter px-[4px] py-[5px] text-[14px] leading-[16px]">
     Multi Channel Payments
-  </span>
+  </Badge>
 
 </div>
 
-<div class="w-full mt-12 mb-0 relative z-10 px-0 md:px-0"> 
+<div class="w-full mt-0 mb-0 relative z-10">
   
-  <div 
-    class="mx-auto max-w-[1200px] w-full bg-contain bg-center bg-no-repeat relative py-12 md:py-24"
-    style="background-image: url('/credit-card-mockup.png'); min-height: 600px;"
-    data-aos="fade-up"
-    data-aos-duration="1000"
-  >
+  
     
-    <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 px-6 relative z-10">
-       
+    <div 
+      class="absolute inset-0 bg-no-repeat hidden md:block"
+      style="background-image: url('/credit-card-mockup.png'); background-size: 102% 60%; background-position: center 100px;"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    ></div>
+    
+    
+    
+    <div class="relative z-10 py-8 md:py-40 min-h-auto md:min-h-[600px]">
+    
+      <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 px-6">
+         
       <div 
-        class="relative -mt-1 mb-8 flex justify-center md:absolute md:top-[-100px] md:left-1/3 md:-translate-x-1/2 md:mt-0 md:mb-0 z-20"
+        class="hidden md:block absolute z-20"
+        style="top: 38%; left: 50%; transform: translate(-50%, -50%);"
         data-aos="zoom-in"
         data-aos-duration="1200"
         data-aos-delay="200"
@@ -309,83 +311,77 @@
         <img 
           src="/hand-with-phone.png" 
           alt="Khusapay App" 
-          class="w-[180px] md:w-[280px] max-w-none" 
+          style="width: 300px;"
         />
       </div>
 
-      <div class="flex flex-col gap-8 md:gap-12 w-full md:w-1/3 pt-2 md:pt-0">
-        <div class="flex items-center gap-4 group" data-aos="fade-right" data-aos-delay="300">
-          <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-md">
-            <img src="/icon-credit-card.png" alt="Credit Card" class="w-8 h-8 object-contain" />
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-[#0F172A] mb-1">Credit/Debit Cards</h3>
-            <p class="text-slate-500 text-xs md:text-sm leading-relaxed">Promptly send money to friends and pay bills on time.</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-4 group" data-aos="fade-right" data-aos-delay="400">
-          <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-md">
-            <img src="/icon-mobile-money.png" alt="Mobile Money" class="w-8 h-8 object-contain" />
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-[#0F172A] mb-1">Mobile Money</h3>
-            <p class="text-slate-500 text-xs md:text-sm leading-relaxed">Be assured privacy and security through use of tools.</p>
-          </div>
-        </div>
+      
+      <div class="md:hidden w-full flex justify-center mb-8">
+        <img 
+          src="/hand-with-phone.png" 
+          alt="Khusapay App" 
+          class="w-48 h-auto"
+          data-aos="zoom-in"
+        />
       </div>
 
-      <div class="hidden md:block w-1/3"></div>
+        <div class="flex flex-col gap-6 md:gap-12 w-full md:w-1/3 pt-2 md:pt-0">
+          <PaymentMethodCard 
+            v-for="method in PAYMENT_METHODS.slice(0, 2)"
+            :key="method.id"
+            v-bind="method"
+          />
+        </div>
 
-      <div class="flex flex-col gap-8 md:gap-12 w-full md:w-1/3 pt-2 md:pt-0">
-        <div class="flex items-center gap-4 group" data-aos="fade-left" data-aos-delay="300">
-          <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-md">
-            <img src="/icon-bank.png" alt="Bank Account" class="w-8 h-8 object-contain" />
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-[#0F172A] mb-1">Bank Account</h3>
-            <p class="text-slate-500 text-xs md:text-sm leading-relaxed">Send money to or receive money from other users.</p>
-          </div>
+        <div class="hidden md:block w-1/3"></div>
+
+        <div class="flex flex-col gap-6 md:gap-12 w-full md:w-1/3 pt-2 md:pt-0">
+          <PaymentMethodCard 
+            v-for="method in PAYMENT_METHODS.slice(2, 4)"
+            :key="method.id"
+            v-bind="method"
+          />
         </div>
-        <div class="flex items-center gap-4 group" data-aos="fade-left" data-aos-delay="400">
-          <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 shadow-md">
-            <img src="/icon-transfer.png" alt="Bank Transfer" class="w-8 h-8 object-contain" />
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-[#0F172A] mb-1">Bank Transfer</h3>
-            <p class="text-slate-500 text-xs md:text-sm leading-relaxed">Easily withdraw money from any agent countrywide.</p>
-          </div>
-        </div>
+
       </div>
-
     </div>
   </div>
 </div>
 </div>
-  
+<!--footer CTA-->
 
-<div class="-mx-6 bg-cover bg-center bg-no-repeat text-white rounded-[18px] pt-16 pb-0 px-6 md:px-16 relative overflow-hidden mb-0" style="background-image: url('/footer-bg.png');" data-aos="fade-up">
+<div 
+  class="-mt-8 md:-mt-48 mx-auto max-w-[1000px] w-[calc(100%-32px)] h-auto md:h-[400px] bg-cover bg-center bg-no-repeat text-white rounded-[18px] pt-16 pb-0 px-6 md:px-16 relative overflow-hidden mb-0 z-20" 
+  style="background-image: url('/footer-bg.png');" 
+  data-aos="fade-up"
+>
   <div class="flex flex-col lg:flex-row items-end justify-between gap-8 h-full">
-    <div class="lg:w-[55%] text-left z-30 pb-16" style="font-family: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+    <div class="font-outfit lg:w-[55%] text-left z-30 pb-16">
       <h2 class="text-2xl md:text-4xl font-light text-white mb-8 leading-tight">
         Khusapay's technology enables governments to do more. Our teams are available to help, every step of the way.
       </h2>
-      <button class="group flex items-center gap-4 bg-[#F89521] hover:bg-orange-600 text-white pl-8 pr-2 py-2 rounded-full font-bold transition-all duration-300 shadow-lg shadow-orange-500/20">
-        <span>Talk to us today</span>
-        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center transition-transform duration-300 group-hover:rotate-45 group-hover:scale-105">
-          <ArrowUpRight class="w-6 h-6 text-[#F89521]" />
+      <div class="flex items-center">
+        <button class="bg-[#F1AB6C] hover:bg-orange-400 text-white px-8 py-3 rounded-full font-bold transition-all duration-300 shadow-lg">
+          <span>Talk to us today</span>
+        </button>
+        <div class="w-12 h-12 bg-[#FBF9F1] rounded-full flex items-center justify-center -ml-6 shadow-lg transition-transform duration-300 hover:rotate-30">
+          <ArrowUpRight class="w-22px h-22px text-black" />
         </div>
-      </button>
+      </div>
+    
+      
     </div>
-    <div class="lg:w-[45%] relative h-[250px] md:h-[320px] w-full flex justify-center lg:justify-end z-0">
+    <div class="lg:w-[45%] relative h-[250px] md:h-[400px] w-full flex justify-center lg:justify-end z-0">
       <img src="/phone-small.png" alt="Large Phone" class="h-full w-auto object-contain object-bottom absolute bottom-0 right-[40px] md:right-[100px] z-10 drop-shadow-2xl" data-aos="fade-up" data-aos-delay="200" />
       <img src="/phone-large.png" alt="Small Phone" class="h-[70%] w-auto object-contain absolute right-4 md:right-12 bottom-8 md:bottom-12 z-20 drop-shadow-2xl rounded-[2rem]" data-aos="fade-up" data-aos-delay="400" />
     </div>
   </div>
 </div>
-      </div>
-    </div>
-
-    <footer class="w-full text-white py-12 md:py-20 bg-cover bg-center bg-no-repeat" style="background-image: url('/footer-bg.png');">
+</div> 
+</div>
+    
+<!--footer information-->
+    <footer class="w-full text-white py-8 md:py-12 bg-cover bg-center bg-no-repeat" style="background-image: url('/footer-bg.png');">
       <div class="max-w-[1078px] mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12 md:mb-16 border-white/10">
           <div class="space-y-4">
@@ -415,12 +411,12 @@
         <hr class="border-white/20 mb-8" />
         <div class="flex flex-col md:flex-row justify-between items-center gap-6">
           <div class="flex items-center gap-2"><img src="/Frame.png" alt="Khusapay Logo" class="h-10 w-auto object-contain" /></div>
-          <div class="text-xs text-gray-300 text-right">&copy; 2025 @khusapay. All Rights Reserved.</div>
+          <div class="text-xs text-gray-300 text-right">&copy; {{ currentYear }} @khusapay. All Rights Reserved.</div>
         </div>
       </div>
     </footer>
 
-  </div>
+  
 </template>
 
 <script setup>
@@ -431,8 +427,16 @@
     LayoutDashboard, ArrowLeftRight, LineChart, ChevronRight, 
     ArrowUpRight
   } from 'lucide-vue-next';
+  
+  // Import components
+  import Button from './components/common/Button.vue';
+  import Badge from './components/common/Badge.vue';
+  import PaymentMethodCard from './components/features/PaymentMethodCard.vue';
+  
+  // Import constants
+  import { CATEGORIES, FEATURES, PAYMENT_METHODS } from './utils/constants.js';
 
-  const categories = ['Government', 'Merchants', 'Consumers', 'Corporates'];
+  const currentYear = new Date().getFullYear();
 
   onMounted(() => {
     AOS.init({
@@ -442,42 +446,6 @@
       once: false,
     });
   });
-
-  const features = [
-    {
-      titlePart1: 'Revenue',
-      titlePart2: 'Collections',
-      description: 'Khusapay is a merchant-centric, fintech powered settlement engine that offers the complete power of a bank to any establishment.',
-      icon: LayoutDashboard,
-      baseColor: 'orange',
-    
-      gradient: 'from-[#FFB800] to-[#F8367C]',
-      customImage: '/card-icon-1.png',
-      scale: 'scale-150'
-    },
-    {
-      titlePart1: 'Payment',
-      titlePart2: 'Aggregation',
-      description: 'By enhancing collection of revenue and reducing leakages, Khusa Pay saves expenditure and ensures convenience.',
-      icon: ArrowLeftRight,
-      baseColor: 'pink',
-      
-      gradient: 'from-[#FFB800] to-[#F8367C]', 
-      customImage: '/card-icon-2.png',
-      scale: 'scale-125'
-    },
-    {
-      titlePart1: 'Business',
-      titlePart2: 'Intelligence',
-      description: 'Receive and disburse funds through multiple channels without worrying about the overhead of managing separate accounts.',
-      icon: LineChart,
-      baseColor: 'orange',
-      
-      gradient: 'from-[#FFB800] to-[#F8367C]',
-      customImage: '/card-icon-3.png',
-      scale: 'scale-150'
-    }
-  ];
 </script>
 
 <style>
