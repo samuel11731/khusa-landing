@@ -9,19 +9,23 @@
         </div>
 
         <div class="hidden md:flex items-center gap-10 text-sm font-medium text-gray-300">
-  <a href="#" class="hover:text-[#F89521]/80 transition">Home</a>
-  <a href="#" class="hover:text-[#F89521]/80 transition">Solutions</a>
-  <a href="#" class="hover:text-[#F89521]/80 transition">Company</a>
+  <a href="#home" class="hover:text-[#F89521]/80 transition">Home</a>
+  <a href="#solutions" class="hover:text-[#F89521]/80 transition">Solutions</a>
+  <a href="#company" class="hover:text-[#F89521]/80 transition">Company</a>
 </div>
 
         <div class="flex items-center gap-4">
-          <Button variant="primary">Sign up</Button>
-          <Button variant="secondary">Sign in</Button>
+          <router-link to="/signup">
+            <Button variant="primary">Sign up</Button>
+          </router-link>
+          <router-link to="/signin">
+            <Button variant="secondary">Sign in</Button>
+          </router-link>
         </div>
       </nav>
 
-      <!-- Hero Section -->
-      <div class="px-4 pt-10 md:pt-20 pb-10 md:pb-[65px] max-w-[1078px] mx-auto text-center flex flex-col items-center gap-6 md:gap-[27px] relative z-10">
+      <!-- Home -->
+      <div id="home" class="px-4 pt-10 md:pt-20 pb-10 md:pb-[65px] max-w-[1078px] mx-auto text-center flex flex-col items-center gap-6 md:gap-[27px] relative z-10">
         <div class="bg-gradient-to-br from-white to-[#F89521] xl:w-[980px] bg-clip-text">
           <h1 
             class="font-inter text-2xl md:text-[86px] font-light leading-[1.1] md:leading-[1] tracking-[-0.2px] flex flex-col items-center gap-2 md:gap-4 w-full text-transparent"
@@ -217,7 +221,7 @@
           
         
        <!-- Solutions -->
-<div class=" w-[350px]  md:w-[1200px] relative left-[50%] md:left-[46.9%] -translate-x-1/2 rounded-t-[30px] md:rounded-t-[30px] rounded-b-none pt-12 md:pt-[84px] px-6 md:pl-[143px] md:pr-16 pb-16 md:pb-16 mb-0 z-20" style="background: linear-gradient(to bottom, #fff6e9 0%, #fff3dc 10%, #e9f7f9 70%, transparent 100%);">
+<div id="solutions" class=" w-[350px]  md:w-[1200px] relative left-[50%] md:left-[46.9%] -translate-x-1/2 rounded-t-[30px] md:rounded-t-[30px] rounded-b-none pt-12 md:pt-[84px] px-6 md:pl-[143px] md:pr-16 pb-16 md:pb-16 mb-0 z-20" style="background: linear-gradient(to bottom, #fff6e9 0%, #fff3dc 10%, #e9f7f9 70%, transparent 100%);">
   
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 mb-12 md:mb-24 items-start">
     <div data-aos="fade-right">
@@ -381,7 +385,7 @@
 </div>
     
 <!--footer information-->
-    <footer class="w-full text-white py-8 md:py-12 bg-cover bg-center bg-no-repeat" style="background-image: url('/footer-bg.png');">
+    <footer id="company" class="w-full text-white py-8 md:py-12 bg-cover bg-center bg-no-repeat" style="background-image: url('/footer-bg.png');">
       <div class="max-w-[1078px] mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12 md:mb-16 border-white/10">
           <div class="space-y-4">
