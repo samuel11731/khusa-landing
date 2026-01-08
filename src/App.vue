@@ -189,7 +189,7 @@
 
               <div class="flex flex-col md:flex-row items-stretch gap-8">
                 
-                <div data-aos="zoom-in-up" data-aos-delay="200" class="bg-white rounded-[40px] p-8 md:w-[400px] md:h-[640px] w-full shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] text-center group border border-gray-50 relative overflow-hidden flex flex-col">
+                <div data-aos="zoom-in-up" data-aos-delay="200" class="rounded-[40px] p-8 md:w-[400px] md:h-[640px] w-full shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] text-center group border-[7px] border-transparent relative overflow-hidden flex flex-col" style="background: linear-gradient(#fff, #fff) padding-box, linear-gradient(180deg, #E6E6E61A 0%, #D4D4D433 100%) border-box;">
                   <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 to-red-400 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
                   <div class="w-[240px] h-[240px] md:w-[280px] md:h-[280px] mx-auto mb-8 relative flex items-center justify-center shrink-0">
                     <div class="absolute inset-0 rounded-full"></div>
@@ -204,7 +204,7 @@
                   </p>
                 </div>
 
-                <div data-aos="zoom-in-up" data-aos-delay="200" class="bg-white rounded-[40px] p-8 md:w-[400px] md:h-[640px] w-full shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] transition duration-500 text-center group border border-gray-50 relative overflow-hidden flex flex-col">
+                <div data-aos="zoom-in-up" data-aos-delay="200" class="rounded-[40px] p-8 md:w-[400px] md:h-[640px] w-full shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] transition duration-500 text-center group border-[7px] border-transparent relative overflow-hidden flex flex-col" style="background: linear-gradient(#fff, #fff) padding-box, linear-gradient(180deg, #E6E6E61A 0%, #D4D4D433 100%) border-box;">
                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-400 to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition duration-700"></div>
                   <div class="w-[240px] h-[240px] md:w-[280px] md:h-[280px] mx-auto mb-8 relative flex items-center justify-center shrink-0">
                      <div class="absolute inset-0 bg-teal-50 rounded-full scale-0"></div>
@@ -221,7 +221,7 @@
           
         
        <!-- Solutions -->
-<div id="solutions" class=" w-[350px]  md:w-[1200px] relative left-[50%] md:left-[46.9%] -translate-x-1/2 rounded-t-[30px] md:rounded-t-[30px] rounded-b-none pt-12 md:pt-[84px] px-6 md:pl-[143px] md:pr-16 pb-16 md:pb-16 mb-0 z-20" style="background: linear-gradient(to bottom, #fff6e9 0%, #fff3dc 10%, #e9f7f9 70%, transparent 100%);">
+<div id="solutions" class="mt-[74.49px] w-[350px] md:w-auto mr-[190px] ml-[190px] md:mr-[70px] md:ml-[1px] -translate-x-1/2 md:translate-x-0 rounded-t-[30px] md:rounded-t-[30px] rounded-b-none pt-12 md:pt-[84px] px-6 md:pl-[143px] md:pr-16 pb-16 md:pb-16 mb-0 z-20" style="background: linear-gradient(to bottom, #fff6e9 0%, #fff3dc 10%, #e9f7f9 70%, transparent 100%);">
   
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 mb-12 md:mb-24 items-start">
     <div data-aos="fade-right">
